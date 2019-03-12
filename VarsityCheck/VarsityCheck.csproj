@@ -166,10 +166,17 @@
     <Compile Include="Migrations\201903120906078_AddDegreeTableToDb.Designer.cs">
       <DependentUpon>201903120906078_AddDegreeTableToDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.cs" />
+    <Compile Include="Migrations\201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.Designer.cs">
+      <DependentUpon>201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\Diploma.cs" />
     <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\Field.cs" />
+    <Compile Include="Models\FinancialAid.cs" />
+    <Compile Include="Models\FinancialAidField.cs" />
     <Compile Include="Models\School.cs" />
     <Compile Include="Models\University.cs" />
     <Compile Include="Models\UniversityFaculty.cs" />
@@ -250,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903120906078_AddDegreeTableToDb.resx">
       <DependentUpon>201903120906078_AddDegreeTableToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.resx">
+      <DependentUpon>201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -19,6 +19,9 @@ namespace VarsityCheck
         public DbSet<School> schools   { get; set; }
         public DbSet<Diploma> diplomas   { get; set; }
         public DbSet<Degree> degrees    { get; set; }
+        public DbSet<Field> fields { get; set; }
+        public DbSet<FinancialAid> financialAids { get; set; }
+        public DbSet<FinancialAidField> FinancialAidFields { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -40,7 +43,6 @@ namespace VarsityCheck
                .WithMany(fa => fa.SchoolsList)
                .HasForeignKey(s => s.FacultyId);
 
-
             modelBuilder.Entity<Diploma>()
               .Property(di => di.SchoolId)
               .IsOptional();
@@ -50,11 +52,23 @@ namespace VarsityCheck
                 .WithMany(s => s.diplomasList)
                 .HasForeignKey(di => di.SchoolId);
 
-
             modelBuilder.Entity<Degree>()
               .HasRequired(de => de.Schools)
               .WithMany(s => s.degreesList)
               .HasForeignKey(de => de.SchoolId);
+
+            modelBuilder.Entity<FinancialAidField>()
+                .HasKey(faf => new { faf.FinancialAidId, faf.FieldId });
+
+            modelBuilder.Entity<FinancialAidField>()
+                .HasRequired(faf => faf.Field)
+                .WithMany(f => f.FinancialAidFieldsList)
+                .HasForeignKey(faf => faf.FieldId);
+
+            modelBuilder.Entity<FinancialAidField>()
+                .HasRequired(faf => faf.FinancialAid)
+                .WithMany(fa => fa.FinancialAidFieldsList)
+                .HasForeignKey(faf => faf.FinancialAidId);
 
 
         }
