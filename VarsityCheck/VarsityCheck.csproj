@@ -170,6 +170,46 @@
     <Compile Include="Migrations\201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.Designer.cs">
       <DependentUpon>201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903121042530_AddDataToDegreeTable.cs" />
+    <Compile Include="Migrations\201903121042530_AddDataToDegreeTable.Designer.cs">
+      <DependentUpon>201903121042530_AddDataToDegreeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121053357_AddDataToUniversityTable.cs" />
+    <Compile Include="Migrations\201903121053357_AddDataToUniversityTable.Designer.cs">
+      <DependentUpon>201903121053357_AddDataToUniversityTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121054079_AddDataToFacultyTable.cs" />
+    <Compile Include="Migrations\201903121054079_AddDataToFacultyTable.Designer.cs">
+      <DependentUpon>201903121054079_AddDataToFacultyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121055017_AddDataToUniversityFacultyTable.cs" />
+    <Compile Include="Migrations\201903121055017_AddDataToUniversityFacultyTable.Designer.cs">
+      <DependentUpon>201903121055017_AddDataToUniversityFacultyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121055532_AddDataToSchoolsTable.cs" />
+    <Compile Include="Migrations\201903121055532_AddDataToSchoolsTable.Designer.cs">
+      <DependentUpon>201903121055532_AddDataToSchoolsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121056461_AddDataToDiplomaTable.cs" />
+    <Compile Include="Migrations\201903121056461_AddDataToDiplomaTable.Designer.cs">
+      <DependentUpon>201903121056461_AddDataToDiplomaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121058400_AddDataToDegreeTable1.cs" />
+    <Compile Include="Migrations\201903121058400_AddDataToDegreeTable1.Designer.cs">
+      <DependentUpon>201903121058400_AddDataToDegreeTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121102254_AddDataToFinancialAidTable.cs" />
+    <Compile Include="Migrations\201903121102254_AddDataToFinancialAidTable.Designer.cs">
+      <DependentUpon>201903121102254_AddDataToFinancialAidTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121108468_AddDataToFieldTable.cs" />
+    <Compile Include="Migrations\201903121108468_AddDataToFieldTable.Designer.cs">
+      <DependentUpon>201903121108468_AddDataToFieldTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121111020_AddDataToFinancialFieldTable.cs" />
+    <Compile Include="Migrations\201903121111020_AddDataToFinancialFieldTable.Designer.cs">
+      <DependentUpon>201903121111020_AddDataToFinancialFieldTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\Diploma.cs" />
@@ -260,6 +300,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.resx">
       <DependentUpon>201903121039046_CreatedFinancialAidFieldFinancialAidFieldTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121042530_AddDataToDegreeTable.resx">
+      <DependentUpon>201903121042530_AddDataToDegreeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121053357_AddDataToUniversityTable.resx">
+      <DependentUpon>201903121053357_AddDataToUniversityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121054079_AddDataToFacultyTable.resx">
+      <DependentUpon>201903121054079_AddDataToFacultyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121055017_AddDataToUniversityFacultyTable.resx">
+      <DependentUpon>201903121055017_AddDataToUniversityFacultyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121055532_AddDataToSchoolsTable.resx">
+      <DependentUpon>201903121055532_AddDataToSchoolsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121056461_AddDataToDiplomaTable.resx">
+      <DependentUpon>201903121056461_AddDataToDiplomaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121058400_AddDataToDegreeTable1.resx">
+      <DependentUpon>201903121058400_AddDataToDegreeTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121102254_AddDataToFinancialAidTable.resx">
+      <DependentUpon>201903121102254_AddDataToFinancialAidTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121108468_AddDataToFieldTable.resx">
+      <DependentUpon>201903121108468_AddDataToFieldTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121111020_AddDataToFinancialFieldTable.resx">
+      <DependentUpon>201903121111020_AddDataToFinancialFieldTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
