@@ -9,10 +9,20 @@ namespace VarsityCheck
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/lib/jquery/jquery.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/bundles/Scripts").Include(
+                        "~/Scripts/lib/bootstrap/js/bootstrap.min.js",
+                        "~/Scripts/lib/isotope/isotope.min.js",
+                        "~/Scripts/lib/hover/hoverdir.js",
+                        "~/Scripts/lib/unveil-effects/unveil-effects.js",
+                        "~/Scripts/lib/owl-carousel/owl-carousel.js",
+                        "~/Scripts/lib/jetmenu/jetmenu.js",
+                        "~/Scripts/lib/animate-enhanced/animate-enhanced.min.js",
+                        "~/Scripts/lib/jigowatt/jigowatt.js",
+                        "~/Scripts/lib/easypiechart/easypiechart.min.js",
+                        "~/Scripts/js/main.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
@@ -23,8 +33,16 @@ namespace VarsityCheck
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/lib/bootstrap/css/bootstrap.min.css",
+                      "~/Content/lib/font-awesome/css/font-awesome.min.css",
+                      "~/Content/lib/prettyphoto/css/prettyphoto.css",
+                      "~/Content/lib/hover/hoverex-all.css",
+                      "~/Content/lib/jetmenu/jetmenu.css",
+                      "~/Content/lib/owl-carousel/owl-carousel.css",
+                      "~/Content/style.css",
+                      "~/Content/bbpress.css",
+                      "~/Content/css/colors/blue.css"));
+
         }
     }
 }

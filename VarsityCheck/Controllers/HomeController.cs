@@ -3,26 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VarsityCheck.ViewModels;
 
 namespace VarsityCheck.Controllers
 {
     public class HomeController : Controller
     {
+        TheDbContext theDbcontext = new TheDbContext();
+        DisplayViews display = new DisplayViews();
+
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Bursary()
         {
-            ViewBag.Message = "Your application description page.";
+            display.fields = theDbcontext.fields.ToList();
+            display.financialAids = theDbcontext.financialAids.ToList();
+            display.financialAidsFields = theDbcontext.FinancialAidFields.ToList();
+
+            return View(display);
+        }
+
+        public ActionResult CareerPath()
+        {
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+            return View(display);
+        }
+        public ActionResult Learnership()
+        {
 
             return View();
         }
-
-        public ActionResult Contact()
+        public ActionResult GovernmentSector()
         {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }

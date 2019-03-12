@@ -1,0 +1,117 @@
+﻿@model VarsityCheck.ViewModels.DisplayViews
+@{
+    ViewBag.Title = "CareerPath";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="head-t">
+        <article>
+            <img src="~/imgz/up.jpg" alt="">
+        </article>
+        <aside>
+            <h5>SOUTH AFRICAN INTITUTIONS</h5>
+        </aside>
+    </div>
+</section>
+
+<div class="container">
+
+    <table class="table table-striped">
+        <tr>
+            <th>UNIVERSITY NAME</th>
+            <th>FACULTY NAME</th>
+            <th>DEGREE</th>
+            <th>DIPLOMA</th>
+            <th>PROVINCE</th>
+            <th>SCHOOLS</th>
+        </tr>
+
+        <tbody>
+
+            @foreach (var university in Model.universities)
+            {
+                <tr>
+                    <td>
+                        @university.Name
+                    </td>
+                    <td>
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Faculties
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                @foreach (var faculty in Model.faculties)
+                                {
+                                    <a class="dropdown-item" href="#">@faculty.Name</a>
+                                }
+                            </div>
+                        </div>
+
+
+                    </td>
+
+                    <td>
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Degrees
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                @foreach (var degree in Model.degrees)
+                                {
+                                    <a class="dropdown-item" href="#">@degree.Name</a>
+                                }
+                            </div>
+                        </div>
+
+
+                    </td>
+
+                    <td>
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Diplomas
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                @foreach (var diploma in Model.diplomas)
+                                {
+                                    <a class="dropdown-item" href="#">@diploma.Name</a>
+                                }
+                            </div>
+                        </div>
+
+
+                    </td>
+
+                    <td>
+                        No Provinces
+
+                    </td>
+
+                    <td>
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Schools
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                @foreach (var school in Model.schools)
+                                {
+                                    <a class="dropdown-item" href="#">@school.Name</a>
+                                }
+                            </div>
+                        </div>
+
+
+                    </td>
+
+
+                </tr>
+            }
+
+
+        </tbody>
+
+    </table>
+
+
+</div>
