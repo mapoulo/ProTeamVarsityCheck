@@ -10,19 +10,19 @@ namespace VarsityCheck
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/lib/jquery/jquery.min.js"));
+                        "~/Scripts/jquery.min.js",
+                        "~/Scripts/jquery.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/Scripts").Include(
-                        "~/Scripts/lib/bootstrap/js/bootstrap.min.js",
-                        "~/Scripts/lib/isotope/isotope.min.js",
-                        "~/Scripts/lib/hover/hoverdir.js",
-                        "~/Scripts/lib/unveil-effects/unveil-effects.js",
-                        "~/Scripts/lib/owl-carousel/owl-carousel.js",
-                        "~/Scripts/lib/jetmenu/jetmenu.js",
-                        "~/Scripts/lib/animate-enhanced/animate-enhanced.min.js",
-                        "~/Scripts/lib/jigowatt/jigowatt.js",
-                        "~/Scripts/lib/easypiechart/easypiechart.min.js",
-                        "~/Scripts/js/main.js"));
+                        "~/Scripts/isotope.min.js",
+                        "~/Scripts/hoverdir.js",
+                        "~/Scripts/unveil-effects.js",
+                        "~/Scripts/owl-carousel.js",
+                        "~/Scripts/jetmenu.js",
+                        "~/Scripts/animate-enhanced.min.js",
+                        "~/Scripts/jigowatt.js",
+                        "~/Scripts/easypiechart.min.js",
+                        "~/Scripts/main.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
@@ -30,18 +30,20 @@ namespace VarsityCheck
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/lib/bootstrap/css/bootstrap.min.css",
-                      "~/Content/lib/font-awesome/css/font-awesome.min.css",
-                      "~/Content/lib/prettyphoto/css/prettyphoto.css",
-                      "~/Content/lib/hover/hoverex-all.css",
-                      "~/Content/lib/jetmenu/jetmenu.css",
-                      "~/Content/lib/owl-carousel/owl-carousel.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/prettyphoto.css",
+                      "~/Content/hoverex-all.css",
+                      "~/Content/jetmenu.css",
+                      "~/Content/owl-carousel.css",
                       "~/Content/style.css",
                       "~/Content/bbpress.css",
-                      "~/Content/css/colors/blue.css"));
+                      "~/Content/blue.css"));
 
         }
     }

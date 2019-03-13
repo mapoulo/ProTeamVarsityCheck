@@ -87,7 +87,7 @@ nav > .nav.nav-tabs{
 }
 /*
 ========================================================================
-filter
+filter 1
 */
 #filterid{
   margin: auto;
@@ -106,6 +106,7 @@ filter
 #myTable td {
   padding: 5px;
   text-align: center;
+  background-color: #FFF;
 }
 .optionsDiv {
   padding-bottom: 10px;
@@ -129,11 +130,9 @@ filter
   background: #99FFD6;
 }
   
-  
-  
-/*
-================================End of filter====================================
-*/
+/*====================================filter 2================================================*/
+
+/*========================================end filter 2============================================*/
 .sec-uni{
   background: #FFF;
   color: #00798C;
@@ -548,7 +547,7 @@ body.nobg {
   margin: 0;
   overflow: hidden;
   width: 100%;
-  background: url("../imgz/1.jpg") center no-repeat;
+  background: url("../imgz/2.jpg") center no-repeat;
   min-height: 400px;
 }
 
@@ -595,11 +594,15 @@ body.nobg .section1 {
 
 #intro {
   overflow: hidden;
-  background: url(../imgz/1.jpg) center no-repeat fixed;
+  background: url(../imgz/33.jpg) center no-repeat fixed;
   background-size: cover;
   padding: 150px 0px 0px 0px;
   margin: 0;
   text-align: center;
+}
+#intro img{
+  width: 10px;
+  height: 10px;
 }
 #intro .container{
   text-align: center;
