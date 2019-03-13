@@ -48,5 +48,10 @@ namespace VarsityCheck.Controllers
 
             return View();
         }
+
+        public ActionResult CareerSelection()
+        {
+            return View();
+        }
     }
 }

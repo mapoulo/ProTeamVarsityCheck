@@ -315,6 +315,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_css.cshtml" />
     <Content Include="Views\Shared\_scripts.cshtml" />
+    <Content Include="Views\Home\CareerSelection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903120825374_InitialMigrations.resx">
