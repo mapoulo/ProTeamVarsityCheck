@@ -237,6 +237,8 @@
     <Content Include="Global.asax" />
     <Content Include="imgz\!!!!!UWC-Banner.jpg" />
     <Content Include="imgz\1.jpg" />
+    <Content Include="imgz\33.jpg" />
+    <Content Include="imgz\arrow.png" />
     <Content Include="imgz\certificate.png" />
     <Content Include="imgz\confidential-folder.png" />
     <Content Include="imgz\d.jpeg" />
@@ -248,6 +250,7 @@
     <Content Include="imgz\gm.png" />
     <Content Include="imgz\gmail.png" />
     <Content Include="imgz\google-plus.png" />
+    <Content Include="imgz\hhhh.png" />
     <Content Include="imgz\kzn.jpg" />
     <Content Include="imgz\linkedin.png" />
     <Content Include="imgz\logo.PNG" />
@@ -315,7 +318,11 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_css.cshtml" />
     <Content Include="Views\Shared\_scripts.cshtml" />
-    <Content Include="Views\Home\CareerSelection.cshtml" />
+    <Content Include="Views\Home\Degrees.cshtml" />
+    <Content Include="Views\Home\Diploma.cshtml" />
+    <Content Include="Views\Home\Certification.cshtml" />
+    <Content Include="Views\Home\University.cshtml" />
+    <Content Include="Views\Home\Application.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903120825374_InitialMigrations.resx">

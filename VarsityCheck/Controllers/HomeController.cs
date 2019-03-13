@@ -10,8 +10,7 @@ namespace VarsityCheck.Controllers
     public class HomeController : Controller
     {
         TheDbContext theDbcontext = new TheDbContext();
-        DisplayViews display = new DisplayViews();
-
+        DisplayViews display = new DisplayViews();       
 
         public ActionResult Index()
         {
@@ -29,6 +28,23 @@ namespace VarsityCheck.Controllers
 
         public ActionResult CareerPath()
         {
+
+            return View();
+        }
+        public ActionResult Degrees()
+        {
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();            
+            display.degrees = theDbcontext.degrees.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+
+            return View(display);
+        }
+
+        public ActionResult Diploma()
+        {
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
@@ -38,19 +54,30 @@ namespace VarsityCheck.Controllers
 
             return View(display);
         }
+        public ActionResult Certification()
+        {
+            return View();
+        }
+
         public ActionResult Learnership()
         {
 
             return View();
         }
-        public ActionResult GovernmentSector()
+        public ActionResult University()
         {
 
             return View();
         }
-
-        public ActionResult CareerSelection()
+        public ActionResult Application()
         {
+
+            return View();
+        }
+        
+        public ActionResult GovernmentSector()
+        {
+
             return View();
         }
     }

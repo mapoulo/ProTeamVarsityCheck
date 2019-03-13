@@ -2471,7 +2471,7 @@ over {
 }
 
 .dmtop {
-  background-image: url('../img/arrow.png');
+  background-image: url('~/imgz/arrow.png');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   z-index: 9999;
