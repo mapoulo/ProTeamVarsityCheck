@@ -4,18 +4,7 @@
     ViewBag.Title = "Degrees";
 }
 
-
-<section>
-    <div class="head-t">
-        <article>
-            <img src="~/imgz/up.jpg" alt="">
-        </article>
-        <aside>
-            <h5>SOUTH AFRICAN BURSARIES</h5>
-        </aside>
-    </div>
-</section>
-
+<!--
 <section class="section4 text-center">
     <div class="container">
 
@@ -31,11 +20,11 @@
 
             <tbody>
 
-                @foreach (var university in Model.universities)
+                @@foreach (var university in Model.universities)
                 {
                     <tr>
                         <td>
-                            @university.Name
+                            @@university.Name
                         </td>
                         <td>
                             <div class="dropdown show">
@@ -43,9 +32,9 @@
                                     Faculties
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    @foreach (var faculty in Model.faculties)
+                                    @@foreach (var faculty in Model.faculties)
                                     {
-                                        <a class="dropdown-item" href="#">@faculty.Name</a>
+                                        <a class="dropdown-item" href="#">@@faculty.Name</a>
                                     }
                                 </div>
                             </div>
@@ -59,9 +48,9 @@
                                     Degrees
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    @foreach (var degree in Model.degrees)
+                                   @@foreach (var degree in Model.degrees)
                                     {
-                                        <a class="dropdown-item" href="#">@degree.Name</a>
+                                        <a class="dropdown-item" href="#">@@degree.Name</a>
                                     }
                                 </div>
                             </div>
@@ -75,9 +64,9 @@
                                     Diplomas
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    @foreach (var diploma in Model.diplomas)
+                                    @@foreach (var diploma in Model.diplomas)
                                     {
-                                        <a class="dropdown-item" href="#">@diploma.Name</a>
+                                        <a class="dropdown-item" href="#">@@diploma.Name</a>
                                     }
                                 </div>
                             </div>
@@ -96,9 +85,9 @@
                                     Schools
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    @foreach (var school in Model.schools)
+                                    @@foreach (var school in Model.schools)
                                     {
-                                        <a class="dropdown-item" href="#">@school.Name</a>
+                                        <a class="dropdown-item" href="#">@@school.Name</a>
                                     }
                                 </div>
                             </div>
@@ -128,7 +117,7 @@
             <img src="~/imgz/up.jpg" alt="">
         </article>
         <aside>
-            <h5>SOUTH AFRICAN BURSARIES</h5>
+            <h5>SOUTH AFRICAN DEGREES</h5>
         </aside>
     </div>
 </section>
@@ -138,494 +127,94 @@
         Filter By Position
         <select id="selectField">
             <option value="All" selected>All</option>
-            <option value="Eastern">Eastern Cape</option>
-            <option value="Free">Free State</option>
-            <option value="Gauteng">Gauteng</option>
-            <option value="KwaZulu">KwaZulu-Natalr</option>
-            <option value="Limpopo">Limpopo</option>
-            <option value="Mpumalanga">Mpumalanga</option>
-            <option value="Northern">Northern Cape</option>
-            <option value="North">North West</option>
-            <option value="Western">Western Cape</option>
+            <option value="Health">Health Sciences</option>
+            <option value="Education">Education</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Humanities">Humanities</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
         </select>
     </div>
-    <table id="myTable">
 
+    <table id="myTable">
         <tr position=""></tr>
 
-        <tr position="Gauteng">
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
+        <tr position="Engineering">
+            @foreach (var degree in Model.degrees)
+            {
+                <td>
+                    <div class="cont1">
+                        <div id="co">
+                            <h3> @degree.Name</h3>
+                            <img src="~/imgz/degrees/engineering/civil.jpg" alt="">
+                            <div class="btn-co">
+                                <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr position="Limpopo">
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-        </tr>
-        <tr position="North">
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr position="Free">
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
+                </td>
+            }
         </tr>
 
-        <tr position="Mpumalanga">
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
+        <tr position="Health">
+            @foreach (var degree in Model.degrees)
+            {
+                <td>
+                    <div class="cont1">
+                        <div id="co">
+                            <h3> @degree.Name</h3>
+                            <img src="~/imgz/hhhh.png" alt="">
+                            <div class="btn-co">
+                                <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
-        </tr>
-        <tr position="KwaZulu">
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
+                </td>
+            }
         </tr>
 
-        <tr position="West">
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
+        <tr position="Education">
+            @foreach (var degree in Model.degrees)
+            {
+                <td>
+                    <div class="cont1">
+                        <div id="co">
+                            <h3> @degree.Name</h3>
+                            <img src="~/imgz/hhhh.png" alt="">
+                            <div class="btn-co">
+                                <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
+                </td>
+            }
+        </tr>
+        
+        <tr position="Humanities">
+            @foreach (var degree in Model.degrees)
+            {
+                <td>
+                    <div class="cont1">
+                        <div id="co">
+                            <h3> @degree.Name</h3>
+                            <img src="~/imgz/hhhh.png" alt="">
+                            <div class="btn-co">
+                                <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-
+                </td>
+            }
         </tr>
 
-        <tr position="Mpumalanga">
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>Rhodes University</h3>
-                        <img src="~/imgz/hhhh.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>University Of Cape Town</h3>
-                        <img src="~/imgz/uct-logo.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>University Of Cape Town</h3>
-                        <img src="~/imgz/uct-logo.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>University Of Cape Town</h3>
-                        <img src="~/imgz/uct-logo.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="cont1">
-                    <div id="co">
-                        <h3>University Of Cape Town</h3>
-                        <img src="~/imgz/uct-logo.png" alt="">
-                        <div class="btn-co">
-                            <button type="button" class="btn-2">More Info</button>
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
     </table>
+
+
+
 </section>
+
 
 @Html.Partial("_scripts")

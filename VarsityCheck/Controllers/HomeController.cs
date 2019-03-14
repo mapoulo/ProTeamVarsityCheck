@@ -56,13 +56,26 @@ namespace VarsityCheck.Controllers
         }
         public ActionResult Certification()
         {
-            return View();
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+            return View(display);
         }
 
         public ActionResult Learnership()
         {
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
 
-            return View();
+            return View(display);
         }
         public ActionResult University()
         {

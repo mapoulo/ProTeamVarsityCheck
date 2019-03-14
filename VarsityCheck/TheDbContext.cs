@@ -14,6 +14,8 @@ namespace VarsityCheck
         }
 
         public DbSet<Faculty> faculties { get; set; }
+        public DbSet<Certificate> certificates { get; set; }
+        public DbSet<Learnership> learnerships { get; set; }
         public DbSet<University> universities  { get; set; }
         public DbSet<UniversityFaculty> universityFaculties   { get; set; }
         public DbSet<School> schools   { get; set; }

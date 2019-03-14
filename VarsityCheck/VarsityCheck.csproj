@@ -207,13 +207,19 @@
     <Compile Include="Migrations\201903121111020_AddDataToFinancialFieldTable.Designer.cs">
       <DependentUpon>201903121111020_AddDataToFinancialFieldTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903141148299_AddCertificateAndLearnershipsTables.cs" />
+    <Compile Include="Migrations\201903141148299_AddCertificateAndLearnershipsTables.Designer.cs">
+      <DependentUpon>201903141148299_AddCertificateAndLearnershipsTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\Diploma.cs" />
     <Compile Include="Models\Faculty.cs" />
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\FinancialAid.cs" />
     <Compile Include="Models\FinancialAidField.cs" />
+    <Compile Include="Models\Learnership.cs" />
     <Compile Include="Models\School.cs" />
     <Compile Include="Models\University.cs" />
     <Compile Include="Models\UniversityFaculty.cs" />
@@ -232,15 +238,18 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="imgz\!!!!!UWC-Banner.jpg" />
-    <Content Include="imgz\1.jpg" />
     <Content Include="imgz\33.jpg" />
     <Content Include="imgz\arrow.png" />
     <Content Include="imgz\certificate.png" />
     <Content Include="imgz\confidential-folder.png" />
-    <Content Include="imgz\d.jpeg" />
-    <Content Include="imgz\download.jpg" />
-    <Content Include="imgz\download.png" />
+    <Content Include="imgz\degrees\engineering\Chemical.jpg" />
+    <Content Include="imgz\degrees\engineering\civil.jpg" />
+    <Content Include="imgz\degrees\engineering\electrical.jpg" />
+    <Content Include="imgz\degrees\engineering\extraction.jpg" />
+    <Content Include="imgz\degrees\engineering\industrial.jpg" />
+    <Content Include="imgz\degrees\engineering\mechanical.jpg" />
+    <Content Include="imgz\degrees\engineering\Mining.jpg" />
+    <Content Include="imgz\degrees\engineering\physical.jpg" />
     <Content Include="imgz\facebook %281%29.png" />
     <Content Include="imgz\feedback.png" />
     <Content Include="imgz\first.png" />
@@ -248,7 +257,6 @@
     <Content Include="imgz\gmail.png" />
     <Content Include="imgz\google-plus.png" />
     <Content Include="imgz\hhhh.png" />
-    <Content Include="imgz\kzn.jpg" />
     <Content Include="imgz\linkedin.png" />
     <Content Include="imgz\logo.PNG" />
     <Content Include="imgz\mail.png" />
@@ -256,17 +264,34 @@
     <Content Include="imgz\phone-call.png" />
     <Content Include="imgz\quality.png" />
     <Content Include="imgz\school.png" />
-    <Content Include="imgz\st.jpg" />
     <Content Include="imgz\trophy-shape.png" />
     <Content Include="imgz\twitter.png" />
-    <Content Include="imgz\uct-logo.png" />
-    <Content Include="imgz\uct.jpg" />
-    <Content Include="imgz\uj-logo-university-of-johannesburg-1.jpg" />
-    <Content Include="imgz\UKZN.png" />
-    <Content Include="imgz\university-of-venda-logo.png" />
-    <Content Include="imgz\up.jpg" />
-    <Content Include="imgz\w.jpg" />
-    <Content Include="imgz\wits.jpg" />
+    <Content Include="imgz\universities\cput.jpg" />
+    <Content Include="imgz\universities\cut.jpg" />
+    <Content Include="imgz\universities\dut.jpg" />
+    <Content Include="imgz\universities\mandela.jpeg" />
+    <Content Include="imgz\universities\mut.jpg" />
+    <Content Include="imgz\universities\nwu.jpg" />
+    <Content Include="imgz\universities\ru.jpg" />
+    <Content Include="imgz\universities\smu.jpg" />
+    <Content Include="imgz\universities\spu.jpg" />
+    <Content Include="imgz\universities\sun.jpg" />
+    <Content Include="imgz\universities\tut.jpg" />
+    <Content Include="imgz\universities\uct.jpg" />
+    <Content Include="imgz\universities\ufh.jpg" />
+    <Content Include="imgz\universities\ufs.jpg" />
+    <Content Include="imgz\universities\uj.jpg" />
+    <Content Include="imgz\universities\ukzn.jpg" />
+    <Content Include="imgz\universities\ul.jpg" />
+    <Content Include="imgz\universities\ump.jpg" />
+    <Content Include="imgz\universities\unisa.jpg" />
+    <Content Include="imgz\universities\univen.jpg" />
+    <Content Include="imgz\universities\unizulu.jpg" />
+    <Content Include="imgz\universities\up.jpg" />
+    <Content Include="imgz\universities\uwc.jpg" />
+    <Content Include="imgz\universities\vut.jpg" />
+    <Content Include="imgz\universities\wits.jpg" />
+    <Content Include="imgz\universities\wsu.jpg" />
     <Content Include="Scripts\animate-enhanced.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -332,6 +357,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="imgz\faculties\" />
+    <Folder Include="imgz\schools\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -401,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903121111020_AddDataToFinancialFieldTable.resx">
       <DependentUpon>201903121111020_AddDataToFinancialFieldTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903141148299_AddCertificateAndLearnershipsTables.resx">
+      <DependentUpon>201903141148299_AddCertificateAndLearnershipsTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

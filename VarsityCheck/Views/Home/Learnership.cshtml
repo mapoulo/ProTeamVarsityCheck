@@ -1,4 +1,5 @@
-﻿
+﻿@model VarsityCheck.ViewModels.DisplayViews
+
 @{
     ViewBag.Title = "Learnership";
 }
@@ -13,4 +14,45 @@
         </aside>
     </div>
 </section>
+
+<section id="filterid">
+    <div class="optionsDiv">
+        Filter By Position
+        <select id="selectField">
+            <option value="All" selected>All</option>
+            <option value="Eastern">Eastern Cape</option>
+            <option value="Free">Free State</option>
+            <option value="Gauteng">Gauteng</option>
+            <option value="KwaZulu">KwaZulu-Natalr</option>
+            <option value="Limpopo">Limpopo</option>
+            <option value="Mpumalanga">Mpumalanga</option>
+            <option value="Northern">Northern Cape</option>
+            <option value="North">North West</option>
+            <option value="Western">Western Cape</option>
+        </select>
+    </div>
+    <table id="myTable">
+
+        <tr position=""></tr>
+
+        <tr position="Engineering">
+            @foreach (var learnership in Model.degrees)
+            {
+                <td>
+                    <div class="cont1">
+                        <div id="co">
+                            <h3> @learnership.Name</h3>
+                            <img src="~/imgz/hhhh.png" alt="">
+                            <div class="btn-co">
+                                <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            }
+        </tr>
+    </table>
+</section>
+
+@Html.Partial("_scripts")
 
