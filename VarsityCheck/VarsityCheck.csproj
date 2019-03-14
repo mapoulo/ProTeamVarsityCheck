@@ -284,6 +284,32 @@
     <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\owl-carousel.js" />
     <Content Include="Scripts\unveil-effects.js" />
+    <Content Include="imgz\logos\cput.jpg" />
+    <Content Include="imgz\logos\cut.jpg" />
+    <Content Include="imgz\logos\dut.jpg" />
+    <Content Include="imgz\logos\mandela.jpeg" />
+    <Content Include="imgz\logos\mut.jpg" />
+    <Content Include="imgz\logos\nwu.jpg" />
+    <Content Include="imgz\logos\ru.jpg" />
+    <Content Include="imgz\logos\smu.jpg" />
+    <Content Include="imgz\logos\spu.jpg" />
+    <Content Include="imgz\logos\sun.jpg" />
+    <Content Include="imgz\logos\tut.jpg" />
+    <Content Include="imgz\logos\uct.jpg" />
+    <Content Include="imgz\logos\ufh.jpg" />
+    <Content Include="imgz\logos\ufs.jpg" />
+    <Content Include="imgz\logos\uj.jpg" />
+    <Content Include="imgz\logos\ukzn.jpg" />
+    <Content Include="imgz\logos\ul.jpg" />
+    <Content Include="imgz\logos\ump.jpg" />
+    <Content Include="imgz\logos\unisa.jpg" />
+    <Content Include="imgz\logos\univen.jpg" />
+    <Content Include="imgz\logos\unizulu.jpg" />
+    <Content Include="imgz\logos\up.jpg" />
+    <Content Include="imgz\logos\uwc.jpg" />
+    <Content Include="imgz\logos\vut.jpg" />
+    <Content Include="imgz\logos\wits.jpg" />
+    <Content Include="imgz\logos\wsu.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -405,6 +431,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
+    <ItemGroup>
+      <RoslynFiles Include="$(CscToolPath)\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
+    <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
+  </Target>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
