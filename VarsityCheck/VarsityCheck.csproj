@@ -211,8 +211,22 @@
     <Compile Include="Migrations\201903141148299_AddCertificateAndLearnershipsTables.Designer.cs">
       <DependentUpon>201903141148299_AddCertificateAndLearnershipsTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903141253040_AddCollegeTablesToDB.cs" />
+    <Compile Include="Migrations\201903141253040_AddCollegeTablesToDB.Designer.cs">
+      <DependentUpon>201903141253040_AddCollegeTablesToDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903141348179_AddCollegeFieldTablesToDB.cs" />
+    <Compile Include="Migrations\201903141348179_AddCollegeFieldTablesToDB.Designer.cs">
+      <DependentUpon>201903141348179_AddCollegeFieldTablesToDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903141414529_LearnershipCertificateRelationshipToDB.cs" />
+    <Compile Include="Migrations\201903141414529_LearnershipCertificateRelationshipToDB.Designer.cs">
+      <DependentUpon>201903141414529_LearnershipCertificateRelationshipToDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Certificate.cs" />
+    <Compile Include="Models\CollegeField.cs" />
+    <Compile Include="Models\Colleges.cs" />
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\Diploma.cs" />
     <Compile Include="Models\Faculty.cs" />
@@ -220,6 +234,7 @@
     <Compile Include="Models\FinancialAid.cs" />
     <Compile Include="Models\FinancialAidField.cs" />
     <Compile Include="Models\Learnership.cs" />
+    <Compile Include="Models\LearnershipCertificate.cs" />
     <Compile Include="Models\School.cs" />
     <Compile Include="Models\University.cs" />
     <Compile Include="Models\UniversityFaculty.cs" />
@@ -431,6 +446,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903141148299_AddCertificateAndLearnershipsTables.resx">
       <DependentUpon>201903141148299_AddCertificateAndLearnershipsTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903141253040_AddCollegeTablesToDB.resx">
+      <DependentUpon>201903141253040_AddCollegeTablesToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903141348179_AddCollegeFieldTablesToDB.resx">
+      <DependentUpon>201903141348179_AddCollegeFieldTablesToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903141414529_LearnershipCertificateRelationshipToDB.resx">
+      <DependentUpon>201903141414529_LearnershipCertificateRelationshipToDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

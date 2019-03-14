@@ -9,5 +9,8 @@ namespace VarsityCheck.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public ICollection<Certificate> CertificatesList { get; set; }
+        public ICollection<LearnershipCertificate> LearnershipCertificateList { get; set; }
+
     }
 }

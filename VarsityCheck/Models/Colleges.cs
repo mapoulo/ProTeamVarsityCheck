@@ -5,13 +5,12 @@ using System.Web;
 
 namespace VarsityCheck.Models
 {
-    public class Field
+    public class Colleges
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ICollection<FinancialAidField> FinancialAidFieldsList { get; set; }
+        public string Location { get; set; }
         public ICollection<CollegeField> CollegeFieldList { get; set; }
-        public ICollection<Certificate> CertificatesList { get; set; }
-
+       
     }
 }

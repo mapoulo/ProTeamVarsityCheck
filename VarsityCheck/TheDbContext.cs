@@ -14,21 +14,25 @@ namespace VarsityCheck
         }
 
         public DbSet<Faculty> faculties { get; set; }
-        public DbSet<Certificate> certificates { get; set; }
-        public DbSet<Learnership> learnerships { get; set; }
-        public DbSet<University> universities  { get; set; }
-        public DbSet<UniversityFaculty> universityFaculties   { get; set; }
-        public DbSet<School> schools   { get; set; }
-        public DbSet<Diploma> diplomas   { get; set; }
-        public DbSet<Degree> degrees    { get; set; }
+        public DbSet<University> universities { get; set; }
+        public DbSet<UniversityFaculty> universityFaculties { get; set; }
+        public DbSet<School> schools { get; set; }
+        public DbSet<Diploma> diplomas { get; set; }
+        public DbSet<Degree> degrees { get; set; }
         public DbSet<Field> fields { get; set; }
         public DbSet<FinancialAid> financialAids { get; set; }
         public DbSet<FinancialAidField> FinancialAidFields { get; set; }
+        public DbSet<Certificate> certificates { get; set; }
+        public DbSet<Learnership> learnerships { get; set; }
+        public DbSet<Colleges> colleges { get; set; }
+        public DbSet<LearnershipCertificate> LearnershipCertificate { get; set; }
+        public DbSet<CollegeField> collegeFields { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-           modelBuilder.Entity<UniversityFaculty>()
-                .HasKey(uf => new { uf.FacultyId, uf.UniversityId });
+            modelBuilder.Entity<UniversityFaculty>()
+                 .HasKey(uf => new { uf.FacultyId, uf.UniversityId });
 
             modelBuilder.Entity<UniversityFaculty>()
                 .HasRequired(uf => uf.Universities)
@@ -72,7 +76,37 @@ namespace VarsityCheck
                 .WithMany(fa => fa.FinancialAidFieldsList)
                 .HasForeignKey(faf => faf.FinancialAidId);
 
+            modelBuilder.Entity<CollegeField>()
+                .HasKey(c => new { c.CollegeId, c.FieldId });
 
+
+            modelBuilder.Entity<CollegeField>()
+                .HasRequired(cf => cf.Field)
+                .WithMany(co => co.CollegeFieldList)
+                .HasForeignKey(cf => cf.FieldId);
+
+            modelBuilder.Entity<CollegeField>()
+                .HasRequired(cf => cf.Colleges)
+                .WithMany(co => co.CollegeFieldList)
+                .HasForeignKey(cf => cf.CollegeId);
+
+            modelBuilder.Entity<Certificate>()
+                .HasRequired(ce => ce.Field)
+                .WithMany(fe => fe.CertificatesList)
+                .HasForeignKey(ce => ce.FieldId);
+
+            modelBuilder.Entity<LearnershipCertificate>()
+                .HasKey(lc => new { lc.CertificateId, lc.LearnershipId });
+
+            modelBuilder.Entity<LearnershipCertificate>()
+                .HasRequired(lc => lc.Certificate)
+                .WithMany(co => co.LearnershipCertificateList)
+                .HasForeignKey(cf => cf.CertificateId);
+
+            modelBuilder.Entity<LearnershipCertificate>()
+                .HasRequired(lc => lc.Learnership)
+                .WithMany(co => co.LearnershipCertificateList)
+                .HasForeignKey(cf => cf.LearnershipId);
         }
     }
 }
