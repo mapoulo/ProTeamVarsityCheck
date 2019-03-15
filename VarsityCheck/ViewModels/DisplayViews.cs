@@ -20,5 +20,8 @@ namespace VarsityCheck.ViewModels
         public ICollection<FinancialAidField> financialAidsFields { get; set; }
         public ICollection<Certificate> certificates { get; set; }
         public ICollection<Learnership> learnerships { get; set; }
+        public ICollection<LearnershipCertificate> learnershipCertificates { get; set; }
+        public ICollection<CollegeField> collegeFields { get; set; }
+
     }
 }

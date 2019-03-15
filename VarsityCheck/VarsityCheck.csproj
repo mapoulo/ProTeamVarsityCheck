@@ -233,6 +233,7 @@
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\FinancialAid.cs" />
     <Compile Include="Models\FinancialAidField.cs" />
+    <Compile Include="Models\GovernmentSector.cs" />
     <Compile Include="Models\Learnership.cs" />
     <Compile Include="Models\LearnershipCertificate.cs" />
     <Compile Include="Models\School.cs" />

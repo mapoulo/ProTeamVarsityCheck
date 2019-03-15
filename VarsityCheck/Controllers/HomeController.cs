@@ -79,8 +79,9 @@ namespace VarsityCheck.Controllers
         }
         public ActionResult University()
         {
+            display.universities = theDbcontext.universities.ToList();
 
-            return View();
+            return View(display);
         }
         public ActionResult Application()
         {
