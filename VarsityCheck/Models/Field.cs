@@ -12,6 +12,7 @@ namespace VarsityCheck.Models
         public ICollection<FinancialAidField> FinancialAidFieldsList { get; set; }
         public ICollection<CollegeField> CollegeFieldList { get; set; }
         public ICollection<Certificate> CertificatesList { get; set; }
+        public ICollection<GovernmentSectorField> GovernmentSectorFieldsList { get; set; }
 
     }
 }

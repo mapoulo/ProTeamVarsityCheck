@@ -7,6 +7,19 @@ namespace VarsityCheck.Migrations
     {
         public override void Up()
         {
+            Sql("delete from Degrees where name ='Electrical Engineering' ");
+            Sql("delete from Degrees where name ='Civil Engineering' ");
+            Sql("delete from Degrees where name ='Industrial Engineering' ");
+            Sql("delete from Degrees where name ='Mining Engineering' ");
+            Sql("delete from Degrees where name ='Mechanical Engineering' ");
+            Sql("delete from Degrees where name ='Chemical Engineering' ");
+            Sql("delete from Degrees where name ='Extraction Metallurgy' ");
+            Sql("delete from Degrees where name ='Physical Metallurgy' ");
+
+
+
+
+
             Sql("Insert Into Degrees Values('Electrical Engineering',1)");
             Sql("Insert Into Degrees Values('Civil Engineering',2)");
             Sql("Insert Into Degrees Values('Industrial Engineering',3)");

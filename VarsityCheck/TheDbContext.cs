@@ -27,6 +27,8 @@ namespace VarsityCheck
         public DbSet<Colleges> colleges { get; set; }
         public DbSet<LearnershipCertificate> LearnershipCertificate { get; set; }
         public DbSet<CollegeField> collegeFields { get; set; }
+        public DbSet<GovernmentSector>  governmentSectors{ get; set; }
+        public DbSet<GovernmentSectorField>  governmentSectorFields{ get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -107,6 +109,21 @@ namespace VarsityCheck
                 .HasRequired(lc => lc.Learnership)
                 .WithMany(co => co.LearnershipCertificateList)
                 .HasForeignKey(cf => cf.LearnershipId);
+
+            modelBuilder.Entity<GovernmentSectorField>()
+                .HasKey(g => new {g.GovernmentId, g.FieldId });
+
+            modelBuilder.Entity<GovernmentSectorField>()
+                .HasRequired(g => g.GovernmentSector)
+                .WithMany(go => go.GovernmentSectorFieldsList)
+                .HasForeignKey(g => g.GovernmentId);
+
+            modelBuilder.Entity<GovernmentSectorField>()
+                .HasRequired(g => g.Field)
+                .WithMany(go => go.GovernmentSectorFieldsList)
+                .HasForeignKey(g => g.FieldId);
+                
+                
         }
     }
 }

@@ -223,6 +223,18 @@
     <Compile Include="Migrations\201903141414529_LearnershipCertificateRelationshipToDB.Designer.cs">
       <DependentUpon>201903141414529_LearnershipCertificateRelationshipToDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903151127432_AddGovernmentSectorTablewithRealationshipToField.cs" />
+    <Compile Include="Migrations\201903151127432_AddGovernmentSectorTablewithRealationshipToField.Designer.cs">
+      <DependentUpon>201903151127432_AddGovernmentSectorTablewithRealationshipToField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903151256265_updatedegreecolumn.cs" />
+    <Compile Include="Migrations\201903151256265_updatedegreecolumn.Designer.cs">
+      <DependentUpon>201903151256265_updatedegreecolumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903180750431_UpdateDegreeTable.cs" />
+    <Compile Include="Migrations\201903180750431_UpdateDegreeTable.Designer.cs">
+      <DependentUpon>201903180750431_UpdateDegreeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\CollegeField.cs" />
@@ -234,6 +246,7 @@
     <Compile Include="Models\FinancialAid.cs" />
     <Compile Include="Models\FinancialAidField.cs" />
     <Compile Include="Models\GovernmentSector.cs" />
+    <Compile Include="Models\GovernmentSectorField.cs" />
     <Compile Include="Models\Learnership.cs" />
     <Compile Include="Models\LearnershipCertificate.cs" />
     <Compile Include="Models\School.cs" />
@@ -276,6 +289,7 @@
     <Content Include="imgz\linkedin.png" />
     <Content Include="imgz\logo.PNG" />
     <Content Include="imgz\mail.png" />
+    <Content Include="imgz\Monday Morning Motivational Video %281%29.mp4" />
     <Content Include="imgz\mortarboard.png" />
     <Content Include="imgz\phone-call.png" />
     <Content Include="imgz\quality.png" />
@@ -456,6 +470,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903141414529_LearnershipCertificateRelationshipToDB.resx">
       <DependentUpon>201903141414529_LearnershipCertificateRelationshipToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903151127432_AddGovernmentSectorTablewithRealationshipToField.resx">
+      <DependentUpon>201903151127432_AddGovernmentSectorTablewithRealationshipToField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903151256265_updatedegreecolumn.resx">
+      <DependentUpon>201903151256265_updatedegreecolumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903180750431_UpdateDegreeTable.resx">
+      <DependentUpon>201903180750431_UpdateDegreeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
