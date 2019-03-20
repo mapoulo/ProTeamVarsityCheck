@@ -11,5 +11,6 @@ namespace VarsityCheck.Models
         public string Name { get; set; }
         public ICollection<UniversityFaculty> UniversityFacultyList { get; set; }
         public ICollection<School> SchoolsList { get; set; }
+        public string Image { get; set; }
     }
 }

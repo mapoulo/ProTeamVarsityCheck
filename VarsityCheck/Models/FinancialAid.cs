@@ -14,5 +14,6 @@ namespace VarsityCheck.Models
         public DateTime ClosingDate { get; set; }
         public string URL { get; set; }
         public ICollection<FinancialAidField> FinancialAidFieldsList { get; set; }
+        public string Image { get; set; }
     }
 }

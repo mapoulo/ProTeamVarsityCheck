@@ -11,6 +11,7 @@ namespace VarsityCheck.Models
         public string Name { get; set; }
         public School Schools { get; set; }
         public int SchoolId { get; set; }
-        
+        public string Image { get; set; }
+
     }
 }

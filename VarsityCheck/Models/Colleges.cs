@@ -11,6 +11,7 @@ namespace VarsityCheck.Models
         public string Name { get; set; }
         public string Location { get; set; }
         public ICollection<CollegeField> CollegeFieldList { get; set; }
-       
+        public string Image { get; set; }
+
     }
 }

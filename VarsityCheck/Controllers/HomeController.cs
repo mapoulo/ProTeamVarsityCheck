@@ -83,6 +83,12 @@ namespace VarsityCheck.Controllers
 
             return View(display);
         }
+        public ActionResult UniversityList()
+        {
+            display.universities = theDbcontext.universities.ToList();
+
+            return View(display);
+        }
         public ActionResult Application()
         {
 

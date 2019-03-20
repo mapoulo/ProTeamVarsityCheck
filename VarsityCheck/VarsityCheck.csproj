@@ -235,6 +235,14 @@
     <Compile Include="Migrations\201903180750431_UpdateDegreeTable.Designer.cs">
       <DependentUpon>201903180750431_UpdateDegreeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903180950023_AddColumnPictureForAllTables.cs" />
+    <Compile Include="Migrations\201903180950023_AddColumnPictureForAllTables.Designer.cs">
+      <DependentUpon>201903180950023_AddColumnPictureForAllTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903181039374_AddDataToUniversityTableIncludingImages.cs" />
+    <Compile Include="Migrations\201903181039374_AddDataToUniversityTableIncludingImages.Designer.cs">
+      <DependentUpon>201903181039374_AddDataToUniversityTableIncludingImages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\CollegeField.cs" />
@@ -403,6 +411,7 @@
     <Content Include="Views\Home\Certification.cshtml" />
     <Content Include="Views\Home\University.cshtml" />
     <Content Include="Views\Home\Application.cshtml" />
+    <Content Include="Views\Home\UniversityList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903120825374_InitialMigrations.resx">
@@ -479,6 +488,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903180750431_UpdateDegreeTable.resx">
       <DependentUpon>201903180750431_UpdateDegreeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903180950023_AddColumnPictureForAllTables.resx">
+      <DependentUpon>201903180950023_AddColumnPictureForAllTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903181039374_AddDataToUniversityTableIncludingImages.resx">
+      <DependentUpon>201903181039374_AddDataToUniversityTableIncludingImages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

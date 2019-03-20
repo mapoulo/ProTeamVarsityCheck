@@ -13,5 +13,6 @@ namespace VarsityCheck.Models
         public int FacultyId { get; set; }
         public ICollection<Diploma> diplomasList { get; set; }
         public ICollection<Degree> degreesList { get; set; }
+        public string Image { get; set; }
     }
 }

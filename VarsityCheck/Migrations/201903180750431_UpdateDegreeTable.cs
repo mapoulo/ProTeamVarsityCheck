@@ -40,6 +40,8 @@ namespace VarsityCheck.Migrations
             Sql("delete from Degrees where name ='Chemical Engineering' ");
             Sql("delete from Degrees where name ='Extraction Metallurgy' ");
             Sql("delete from Degrees where name ='Physical Metallurgy' ");
+
+
         }
     }
 }

@@ -13,5 +13,6 @@ namespace VarsityCheck.Models
         public DateTime ClosingDate { get; set; }
         public string  url { get; set; }
         public ICollection<GovernmentSectorField> GovernmentSectorFieldsList { get; set; }
+        public string Image { get; set; }
     }
 }
