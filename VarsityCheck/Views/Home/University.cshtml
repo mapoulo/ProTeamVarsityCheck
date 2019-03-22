@@ -1,10 +1,9 @@
-﻿@model VarsityCheck.ViewModels.DisplayViews
+﻿<!--
 
-@{
+@@{
     ViewBag.Title = "University";
+    
 }
-
-
 
 
 <section>
@@ -13,7 +12,7 @@
             <img src="~/imgz/up.jpg" alt="">
         </article>
         <aside>
-            <h5>@ViewBag.Title</h5>
+            <h5>@@ViewBag.Name</h5>
         </aside>
     </div>
 </section>
@@ -35,208 +34,11 @@
         </select>
     </div>
 
-    <table id="myTable">
-        <tr position=""></tr>
-
-        <tr position="Eastern">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "Eastern Cape")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    }
-                }
-            </td>
-        </tr>
-
-        <tr position="Free">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "Free state")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    }
-                }
-            </td>
-        </tr>
-
-        <tr position="Gauteng">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "Gauteng")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    }
-                }
-            </td>
-        </tr>
-
-        <tr position="KwaZulu">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "KwaZulu Natal")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    }
-                }
-            </td>
-        </tr>
-
-        <tr position="Limpopo">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "Limpopo")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    }
-                }
-            </td>
-        </tr>
-
-        <tr position="Mpumalanga">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "Mpumalanga")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    }
-                }
-            </td>
-        </tr>
-        <tr position="Northern">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "Northern Cape")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    }
-                }
-            </td>
-        </tr>
-        <tr position="North">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "North West")
-                    {
-
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                }
-            </td>
-        </tr>
-
-        <tr position="Western">
-            <td>
-                @foreach (var university in Model.universities)
-                {
-                    if (university.Location == "Western Cape")
-                    {
-                        <div class="cont1">
-                            <div id="co">
-                                <h3> @university.Name</h3>
-                                <img src="@Url.Content(university.Image)" alt="" />
-                                <div class="btn-co">
-                                    <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                }
-            </td>
-        </tr>
-
-    </table>
+@@RenderBody()
 
 
+</section>-->
 
-</section>
 
-@Html.Partial("_scripts")
 
 

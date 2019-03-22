@@ -283,6 +283,10 @@
     <Compile Include="Migrations\201903201449125_jjjjjjjjjjjjj.Designer.cs">
       <DependentUpon>201903201449125_jjjjjjjjjjjjj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903221126303_AddDataToUniversityFacultyTableVersion2.cs" />
+    <Compile Include="Migrations\201903221126303_AddDataToUniversityFacultyTableVersion2.Designer.cs">
+      <DependentUpon>201903221126303_AddDataToUniversityFacultyTableVersion2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -454,6 +458,12 @@
     <Content Include="Views\Home\University.cshtml" />
     <Content Include="Views\Home\Application.cshtml" />
     <Content Include="Views\Home\UniversityList.cshtml" />
+    <Content Include="Views\Home\Mining.cshtml" />
+    <Content Include="Views\Home\Mechanical.cshtml" />
+    <Content Include="Views\Home\Industrial.cshtml" />
+    <Content Include="Views\Home\Chemical.cshtml" />
+    <Content Include="Views\Home\Electrical.cshtml" />
+    <Content Include="Views\Shared\_Universities.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903120825374_InitialMigrations.resx">
@@ -566,6 +576,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903201449125_jjjjjjjjjjjjj.resx">
       <DependentUpon>201903201449125_jjjjjjjjjjjjj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903221126303_AddDataToUniversityFacultyTableVersion2.resx">
+      <DependentUpon>201903221126303_AddDataToUniversityFacultyTableVersion2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

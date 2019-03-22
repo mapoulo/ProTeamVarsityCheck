@@ -1,0 +1,345 @@
+﻿
+<section>
+    <div class="head-t">
+        <article>
+            <img src="~/imgz/up.jpg" alt="">
+        </article>
+        <aside>
+            <h5>@ViewBag.Name</h5>
+        </aside>
+    </div>
+</section>
+
+<section id="filterid">
+    <div class="optionsDiv">
+        Filter By Position
+        <select id="selectField">
+            <option value="All" selected>All</option>
+            <option value="Eastern">Eastern Cape</option>
+            <option value="Free">Free State</option>
+            <option value="Gauteng">Gauteng</option>
+            <option value="KwaZulu">KwaZulu-Natal</option>
+            <option value="Limpopo">Limpopo</option>
+            <option value="Mpumalanga">Mpumalanga</option>
+            <option value="Northern">Northern Cape</option>
+            <option value="North">North West</option>
+            <option value="Western">Western Cape</option>
+        </select>
+    </div>
+
+    @{
+        var schoolIdd = 0;
+        var FacultyII = 0;
+    }
+
+    @foreach (var degree in Model.degrees)
+    {
+        if (degree.Name == ViewBag.degreeName)
+        {
+            schoolIdd = degree.SchoolId;
+        }
+    }
+    @foreach (var school in Model.schools)
+    {
+        if (school.Id == schoolIdd)
+        {
+            FacultyII = school.FacultyId;
+        }
+    }
+
+    <table id="myTable">
+        <tr position=""></tr>
+        <tr position="Eastern">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "Eastern Cape")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+        <tr position="Free">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "Free State")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+        <tr position="Gauteng">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "Gauteng")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+        <tr position="KwaZulu">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "KwaZulu Natal")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+        <tr position="Limpopo">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "Limpopo")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+        <tr position="Mpumalanga">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "Mpumalanga")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+        <tr position="Northern">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "Northern Cape")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+
+        <tr position="North">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "North West")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+
+        <tr position="Western">
+            <td>
+                @foreach (var universityFaculty in Model.universityFaculties)
+                {
+
+                    if (universityFaculty.FacultyId == FacultyII)
+                    {
+                        foreach (var university in Model.universities)
+                        {
+                            if (university.Id == universityFaculty.UniversityId)
+                            {
+                                if (university.Location == "Western Cape")
+                                {
+                                    <div class="cont1">
+                                        <div id="co">
+                                            <h3>@university.Name</h3>
+                                            <img src="@Url.Content(university.Image)" alt="" />
+                                            <div class="btn-co">
+                                                <button type="button" onclick="window.location.href = '/Home/Application'" class="btn-2">More Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+            </td>
+        </tr>
+
+    </table>
+
+</section>
