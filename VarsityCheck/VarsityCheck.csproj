@@ -243,12 +243,54 @@
     <Compile Include="Migrations\201903181039374_AddDataToUniversityTableIncludingImages.Designer.cs">
       <DependentUpon>201903181039374_AddDataToUniversityTableIncludingImages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903201307072_AddGovernmentSectorTablewithRealationshipToField1.cs" />
+    <Compile Include="Migrations\201903201307072_AddGovernmentSectorTablewithRealationshipToField1.Designer.cs">
+      <DependentUpon>201903201307072_AddGovernmentSectorTablewithRealationshipToField1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201308300_201903151256265_updatedegreecolumn.cs" />
+    <Compile Include="Migrations\201903201308300_201903151256265_updatedegreecolumn.Designer.cs">
+      <DependentUpon>201903201308300_201903151256265_updatedegreecolumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201309055_201903180750431_UpdateDegreeTable.cs" />
+    <Compile Include="Migrations\201903201309055_201903180750431_UpdateDegreeTable.Designer.cs">
+      <DependentUpon>201903201309055_201903180750431_UpdateDegreeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201309408_LearnershipCertificateRelationshipToDB1.cs" />
+    <Compile Include="Migrations\201903201309408_LearnershipCertificateRelationshipToDB1.Designer.cs">
+      <DependentUpon>201903201309408_LearnershipCertificateRelationshipToDB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201310085_201903141348179_AddCollegeFieldTablesToDB.cs" />
+    <Compile Include="Migrations\201903201310085_201903141348179_AddCollegeFieldTablesToDB.Designer.cs">
+      <DependentUpon>201903201310085_201903141348179_AddCollegeFieldTablesToDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201310327_201903141253040_AddCollegeTablesToDB.cs" />
+    <Compile Include="Migrations\201903201310327_201903141253040_AddCollegeTablesToDB.Designer.cs">
+      <DependentUpon>201903201310327_201903141253040_AddCollegeTablesToDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201339495_ffffff.cs" />
+    <Compile Include="Migrations\201903201339495_ffffff.Designer.cs">
+      <DependentUpon>201903201339495_ffffff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201424147_gggggggggg.cs" />
+    <Compile Include="Migrations\201903201424147_gggggggggg.Designer.cs">
+      <DependentUpon>201903201424147_gggggggggg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201429506_AddDataDescription.cs" />
+    <Compile Include="Migrations\201903201429506_AddDataDescription.Designer.cs">
+      <DependentUpon>201903201429506_AddDataDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903201449125_jjjjjjjjjjjjj.cs" />
+    <Compile Include="Migrations\201903201449125_jjjjjjjjjjjjj.Designer.cs">
+      <DependentUpon>201903201449125_jjjjjjjjjjjjj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\CollegeField.cs" />
     <Compile Include="Models\Colleges.cs" />
     <Compile Include="Models\Degree.cs" />
     <Compile Include="Models\Diploma.cs" />
+    <Compile Include="Models\Discriptions.cs" />
     <Compile Include="Models\Faculty.cs" />
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\FinancialAid.cs" />
@@ -494,6 +536,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903181039374_AddDataToUniversityTableIncludingImages.resx">
       <DependentUpon>201903181039374_AddDataToUniversityTableIncludingImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201307072_AddGovernmentSectorTablewithRealationshipToField1.resx">
+      <DependentUpon>201903201307072_AddGovernmentSectorTablewithRealationshipToField1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201308300_201903151256265_updatedegreecolumn.resx">
+      <DependentUpon>201903201308300_201903151256265_updatedegreecolumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201309055_201903180750431_UpdateDegreeTable.resx">
+      <DependentUpon>201903201309055_201903180750431_UpdateDegreeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201309408_LearnershipCertificateRelationshipToDB1.resx">
+      <DependentUpon>201903201309408_LearnershipCertificateRelationshipToDB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201310085_201903141348179_AddCollegeFieldTablesToDB.resx">
+      <DependentUpon>201903201310085_201903141348179_AddCollegeFieldTablesToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201310327_201903141253040_AddCollegeTablesToDB.resx">
+      <DependentUpon>201903201310327_201903141253040_AddCollegeTablesToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201339495_ffffff.resx">
+      <DependentUpon>201903201339495_ffffff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201424147_gggggggggg.resx">
+      <DependentUpon>201903201424147_gggggggggg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201429506_AddDataDescription.resx">
+      <DependentUpon>201903201429506_AddDataDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903201449125_jjjjjjjjjjjjj.resx">
+      <DependentUpon>201903201449125_jjjjjjjjjjjjj.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

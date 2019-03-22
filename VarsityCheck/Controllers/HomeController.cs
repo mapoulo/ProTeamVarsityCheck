@@ -11,7 +11,7 @@ namespace VarsityCheck.Controllers
     {
         TheDbContext theDbcontext = new TheDbContext();
         DisplayViews display = new DisplayViews();       
-
+        
         public ActionResult Index()
         {
             return View();
@@ -97,7 +97,7 @@ namespace VarsityCheck.Controllers
         
         public ActionResult GovernmentSector()
         {
-
+            ViewBag.Name = "LIST OF UNIVERSITIES";
             return View();
         }
     }

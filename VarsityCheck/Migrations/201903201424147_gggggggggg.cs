@@ -3,7 +3,7 @@ namespace VarsityCheck.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddDataToUniversityTableIncludingImages : DbMigration
+    public partial class gggggggggg : DbMigration
     {
         public override void Up()
         {
@@ -63,7 +63,7 @@ namespace VarsityCheck.Migrations
             Sql("INSERT INTO Universities values('University of the Witwatersrand','Gauteng','~/imgz/logos/wits.jpg')");
             Sql("INSERT INTO Universities values('Walter Sisulu University','Eastern Cape','~/imgz/logos/wsu.jpg')");
         }
-
+        
         public override void Down()
         {
             Sql("DELETE FROM Universities WHERE Name = 'Cape Peninsula University of Technology'");
