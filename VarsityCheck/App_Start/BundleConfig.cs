@@ -11,6 +11,7 @@ namespace VarsityCheck
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery.min.js",
+                        "~/Scripts/jquery.filterizr.min.js", 
                         "~/Scripts/jquery.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/Scripts").Include(
@@ -42,6 +43,10 @@ namespace VarsityCheck
                       "~/Content/jetmenu.css",
                       "~/Content/owl-carousel.css",
                       "~/Content/style.css",
+                     // "~/Content/stylefolder/style.css",
+                      "~/Content/stylefolder/style.min.css",
+                      //"~/Content/stylefolder/stylecss.css",
+                     // "~/Content/stylefolder/style.scss",
                       "~/Content/bbpress.css",
                       "~/Content/blue.css"));
 

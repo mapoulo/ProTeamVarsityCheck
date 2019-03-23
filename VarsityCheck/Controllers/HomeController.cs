@@ -155,6 +155,7 @@ namespace VarsityCheck.Controllers
             ViewBag.Name = "LIST OF UNIVERSITIES MECHANICAL ENGINEERING";
             ViewBag.degreeName = "Mechanical Engineering";
 
+
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();

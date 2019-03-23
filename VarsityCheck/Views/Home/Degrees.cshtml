@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Degrees";
-   
+
 }
 
 <section>
@@ -15,6 +15,141 @@
         </aside>
     </div>
 </section>
+
+<!--===================================================================================================================-->
+<section>
+    <div class="container">
+        @{
+            var schoolIdd = 0;
+            var FacultyII = 0;
+        }
+
+        @foreach (var degree in Model.degrees)
+        {
+            if (degree.Name == ViewBag.degreeName)
+            {
+                schoolIdd = degree.SchoolId;
+            }
+        }
+        @foreach (var school in Model.schools)
+        {
+            if (school.Id == schoolIdd)
+            {
+                FacultyII = school.FacultyId;
+            }
+        }
+     
+            <div class="row">
+
+                <!--==========================================================================================================-->
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                    </button>
+                    <div class="dropdown-menu filterList" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item filterListItem" data-filter="all">ALL</a>
+                        <a class="dropdown-item filterListItem" data-filter="animals">ANIMALS</a>
+                        <a class="dropdown-item filterListItem" data-filter="nature">NATURE</a>
+                        <a class="dropdown-item filterListItem" data-filter="places">PLACES</a>
+                    </div>
+                </div><!--==========================================================================================================-->
+                <div class="col-md-12 d-flex flex-wrap justify-content-between galleryFilters">
+                    <input type="text" placeholder="Search" class="searchBar form-control" name="search" data-search>
+                </div>
+            </div>
+            <div class="row filtr-container galleryContainer">
+
+                
+                  
+
+                @foreach (var degree in Model.degrees)
+                {
+                <div class="col-md-3 filtr-item thumbnail" data-category="all,animals" data-sort="@degree.Name">
+                    <img src="~/images/animals/animals (1).jpg" alt="">
+                    <span class="item-desc">@degree.Name</span>
+                    <span  class="btn-findMore">More Info</span>
+                </div>
+                
+                
+
+                }
+
+
+
+                <!--
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,animals" data-sort="xoxo">
+        <img src="~/images/animals/animals (2).jpg" alt="">
+        <span class="item-desc">Xoxo</span>
+    </div>
+
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,animals" data-sort="god">
+        <img src="~/imgz/degrees/engineering/civil.jpg" alt="">
+        <span class="item-desc">God</span>
+    </div>
+
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,animals" data-sort="cat">
+        <img src="~/images/animals/animals (4).jpg" alt="">
+        <span class="item-desc">Cat</span>
+    </div>
+
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,animals" data-sort="dog">
+        <img src="~/images/animals/animals (5).jpg" alt="">
+        <span class="item-desc">dog</span>
+    </div>
+
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,nature" data-sort="stones">
+        <img src="~/images/nature/nature (1).jpg" alt="">
+        <span class="item-desc">Stones</span>
+    </div>
+
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,nature" data-sort="dessert">
+        <img src="~/images/nature/nature (2).jpg" alt="">
+        <span class="item-desc">Desert</span>
+    </div>
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,nature" data-sort="waterfall">
+        <img src="~/images/nature/nature (3).jpg" alt="">
+        <span class="item-desc">Waterfall</span>
+    </div>
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,nature" data-sort="leaf">
+        <img src="~/images/nature/nature (4).jpg" alt="">
+        <span class="item-desc">Leaf</span>
+    </div>
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,nature" data-sort="waterfall">
+        <img src="~/images/nature/nature (5).jpg" alt="">
+        <span class="item-desc">Waterfall</span>
+    </div>
+
+
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="highway">
+        <img src="~/images/places/arch (1).jpg" alt="">
+        <span class="item-desc">Highway</span>
+    </div>
+
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="tower">
+        <img src="~/images/places/arch (2).jpg" alt="">
+        <span class="item-desc">Tower</span>
+    </div>
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="roadside">
+        <img src="~/images/places/arch (3).jpg" alt="">
+        <span class="item-desc">Roadside</span>
+    </div>
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="streets">
+        <img src="~/images/places/arch (4).jpg" alt="">
+        <span class="item-desc">Streets</span>
+    </div>
+    <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="city taxi">
+        <img src="~/images/places/arch (5).jpg" alt="">
+        <span class="item-desc">City Taxi</span>
+    </div>
+    -->
+            </div>
+        </div>
+</section>
+<!--===================================================================================================================-->
+
+
+<!--
 
 <section id="filterid">
     <div class="optionsDiv">
@@ -32,15 +167,16 @@
         <tr position=""></tr>
 
         <tr position="Engineering">
-            @foreach (var degree in Model.degrees)
+
+            @@foreach (var degree in Model.degrees)
             {
                 <td>
                     <div class="cont1">
                         <div id="co">
-                            <h3> @degree.Name</h3>
+                            <h3> @@degree.Name</h3>
                             <img src="~/imgz/degrees/engineering/civil.jpg" alt="">
                             <div class="btn-co">
-                                <button type="button" onclick="window.location.href ='@Url.Action("Electrical", "Home")'" class="btn-2">More Info</button>
+                                <button type="button" onclick="window.location.href ='@@Url.Action("Electrical", "Home")'" class="btn-2">More Info</button>
                             </div>
                         </div>
                     </div>
@@ -49,15 +185,15 @@
         </tr>
 
         <tr position="Health">
-            @foreach (var degree in Model.degrees)
+            @@foreach (var degree in Model.degrees)
             {
                 <td>
                     <div class="cont1">
                         <div id="co">
-                            <h3> @degree.Name</h3>
+                            <h3> @@degree.Name</h3>
                             <img src="~/imgz/degrees/engineering/Chemical.jpg" alt="">
                             <div class="btn-co">
-                                <button type="button" onclick="window.location.href = '@Url.Action("Mining", "Home")'" class="btn-2">More Info</button>
+                                <button type="button" onclick="window.location.href = '@@Url.Action("Mining", "Home")'" class="btn-2">More Info</button>
                             </div>
                         </div>
                     </div>
@@ -66,12 +202,12 @@
         </tr>
 
         <tr position="Education">
-            @foreach (var degree in Model.degrees)
+            @@foreach (var degree in Model.degrees)
             {
                 <td>
                     <div class="cont1">
                         <div id="co">
-                            <h3> @degree.Name</h3>
+                            <h3> @@degree.Name</h3>
                             <img src="~/imgz/degrees/engineering/electrical.jpg" alt="">
                             <div class="btn-co">
                                 <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
@@ -81,14 +217,14 @@
                 </td>
             }
         </tr>
-        
+
         <tr position="Humanities">
-            @foreach (var degree in Model.degrees)
+            @@foreach (var degree in Model.degrees)
             {
                 <td>
                     <div class="cont1">
                         <div id="co">
-                            <h3> @degree.Name</h3>
+                            <h3> @@degree.Name</h3>
                             <img src="~/imgz/degrees/engineering/mechanical.jpg" alt="">
                             <div class="btn-co">
                                 <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
@@ -103,7 +239,7 @@
 
 
 
-</section>
+</section>-->
 
 
 @Html.Partial("_scripts")

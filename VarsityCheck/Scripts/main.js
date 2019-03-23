@@ -279,13 +279,18 @@ $(document).ready(function() {
 
   });
 });
-/**filter 2 */
-$(document).ready(function(){
-	var filterizd = $(".filtr-container").filterizr({});
 
-	$(".filterListItem").on('click',function(){
-		$(".filterListItem").removeClass("active");
-		$(this).addClass("active");
-	});
-});
 /** end of filter */
+
+/*===degree filter*/
+
+$(document).ready(function () {
+    var filterizd = $(".filtr-container").filterizr({});
+
+    $(".filterListItem").on('click', function () {
+        $(".filterListItem").removeClass("active");
+        $(this).addClass("active");
+    });
+});
+
+/** end of degree filter */
