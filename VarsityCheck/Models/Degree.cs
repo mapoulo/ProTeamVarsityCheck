@@ -14,6 +14,7 @@ namespace VarsityCheck.Models
         public CareerOpportunity CareerOpportunity { get; set; }
         public int SchoolId { get; set; }
         public string Image { get; set; }
+        public string Links { get; set; }
 
     }
 }

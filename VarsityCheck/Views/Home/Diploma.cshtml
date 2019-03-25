@@ -10,45 +10,48 @@
             <img src="~/imgz/trophy-shape.png" alt="">
         </article>
         <aside>
-            <h5>SOUTH AFRICAN DIPLOMAS</h5>
+            <h5>@ViewBag.Name</h5>
         </aside>
     </div>
 </section>
 
-<section id="filterid">
-    <div class="optionsDiv">
-        Filter By Position
-        <select id="selectField">
-            <option value="All" selected>All</option>
-            <option value="Health">Health Sciences</option>
-            <option value="Education">Education</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Humanities">Humanities</option>
-        </select>
-    </div>
-    <table id="myTable">
+<section>
+    <div class="container">
 
-        <tr position=""></tr>
+        <div class="row">
 
-        <tr position="Engineering">
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter
+                </button>
+                <div class="dropdown-menu filterList" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item filterListItem" data-filter="all">ALL</a>
+                    <a class="dropdown-item filterListItem" data-filter="Health Sciences">Health Sciences</a>
+                    <a class="dropdown-item filterListItem" data-filter="Education">Education</a>
+                    <a class="dropdown-item filterListItem" data-filter="Engineering">Engineering</a>
+                    <a class="dropdown-item filterListItem" data-filter="Humanities">Humanities</a>
+                </div>
+            </div>
+            <div class="col-md-12 d-flex flex-wrap justify-content-between galleryFilters">
+                <input type="text" placeholder="Search" class="searchBar form-control" name="search" data-search>
+            </div>
+        </div>
+        <div class="row filtr-container galleryContainer">
+
             @foreach (var diploma in Model.diplomas)
             {
-                <td>
-                    <div class="cont1">
-                        <div id="co">
-                            <h3> @diploma.Name</h3>
-                            <img src="~/imgz/degrees/engineering/electrical.jpg" alt="">
-                            <div class="btn-co">
-                                <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
-                            </div>
-                        </div>
-                    </div>
-                </td>
+                <div class="col-md-3 filtr-item thumbnail" data-category="all,@diploma.Schools" data-sort="@diploma.Name">
+                    <img src="@Url.Content(diploma.Image)" alt="">
+                    <span class="item-desc">@diploma.Name</span>
+                    <button type="button" onclick="window.location.href ='@Url.Action(diploma.Links, "Home")'" class="btn-findMore">More Info</button>
+                </div>
             }
-        </tr>
 
-    </table>
+        </div>
+    </div>
 </section>
+
 
 @Html.Partial("_scripts")
 

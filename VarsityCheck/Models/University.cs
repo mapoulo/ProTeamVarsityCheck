@@ -12,5 +12,7 @@ namespace VarsityCheck.Models
         public string Location { get; set; }        
         public ICollection<UniversityFaculty> UniversityFacultyList { get; set; }
         public string Image { get; set; }
+        public string UrlHome { get; set; }
+        public string UrlApply { get; set; }
     }
 }

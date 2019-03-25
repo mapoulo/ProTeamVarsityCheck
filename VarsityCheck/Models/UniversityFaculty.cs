@@ -13,6 +13,7 @@ namespace VarsityCheck.Models
 
         public int FacultyId { get; set; }
         public Faculty Faculties { get; set; }
+        public string Url { get; set; }
 
     }
 

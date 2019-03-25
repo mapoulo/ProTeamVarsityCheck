@@ -54,6 +54,8 @@ namespace VarsityCheck.Controllers
 
         public ActionResult Diploma()
         {
+            ViewBag.Name = "DIPLOMA";          
+
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
@@ -168,6 +170,7 @@ namespace VarsityCheck.Controllers
         public ActionResult Industrial()
         {
             ViewBag.Name = "LIST OF UNIVERSITIES INDUSTRIAL ENGINEERING";
+            ViewBag.degreeName = "Industrial Engineering";
 
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
@@ -181,6 +184,7 @@ namespace VarsityCheck.Controllers
         public ActionResult Chemical()
         {
             ViewBag.Name = "LIST OF UNIVERSITIES CHEMICAL ENGINEERING";
+            ViewBag.degreeName = "Chemical Engineering";
 
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
@@ -191,6 +195,77 @@ namespace VarsityCheck.Controllers
 
             return View(display);
         }
+        public ActionResult Extraction()
+        {
+            ViewBag.Name = "LIST OF UNIVERSITIES EXTRACTION ENGINEERING";
+            ViewBag.degreeName = "Extraction Engineering";
+
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+            return View(display);
+        }
+        public ActionResult Physical()
+        {
+            ViewBag.Name = "LIST OF UNIVERSITIES PHYSICAL ENGINEERING";
+            ViewBag.degreeName = "Physical Engineering";
+
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+            return View(display);
+        }
+        public ActionResult Civil()
+        {
+            ViewBag.Name = "LIST OF UNIVERSITIES CIVIL ENGINEERING";
+            ViewBag.degreeName = "Civil Engineering";
+
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+            return View(display);
+        }
+        public ActionResult Mangement()
+        {
+            ViewBag.Name = "LIST OF UNIVERSITIES & COLLEGES OFFERING MANAGEMENT SERVICES";
+            ViewBag.degreeName = "Mangement Services";
+
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+            return View(display);
+        }
+        public ActionResult Operations()
+        {
+            ViewBag.Name = "LIST OF UNIVERSITIES & COLLEGES OFFERING OPARATIONS MANAGEMENT";
+            ViewBag.degreeName = "Operations Management";
+
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+            return View(display);
+        }
+        
 
     }
 }

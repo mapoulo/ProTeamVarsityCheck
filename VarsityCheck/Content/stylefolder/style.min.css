@@ -39,10 +39,9 @@ body{
   box-sizing:border-box;
   box-shadow:0 0 10px rgba(0,0,0,.8);
 }
-    .galleryContainer .thumbnail .item-desc {
+    .galleryContainer .thumbnail .item-desc {       
         position: absolute;
-        top: 10px;
-        right: 15px;
+        top: 10px;        
         display: inline-block;
         text-transform: uppercase;
         color: #fff;
