@@ -335,6 +335,14 @@
     <Compile Include="Migrations\201903260812224_AddImagesToFinancialAid.Designer.cs">
       <DependentUpon>201903260812224_AddImagesToFinancialAid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903261356222_InsertUrlApplyColumnToLearnershipTable.cs" />
+    <Compile Include="Migrations\201903261356222_InsertUrlApplyColumnToLearnershipTable.Designer.cs">
+      <DependentUpon>201903261356222_InsertUrlApplyColumnToLearnershipTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903261357461_InsertDataToLearnershipTable.cs" />
+    <Compile Include="Migrations\201903261357461_InsertDataToLearnershipTable.Designer.cs">
+      <DependentUpon>201903261357461_InsertDataToLearnershipTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -368,7 +376,6 @@
     <Content Include="Content\style.css" />
     <Content Include="Content\stylefolder\style.css" />
     <Content Include="Content\stylefolder\style.min.css" />
-    <Content Include="Content\stylefolder\stylecss.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -391,6 +398,9 @@
     <Content Include="imgz\arrow.png" />
     <Content Include="imgz\Bursary\FNB.jpg" />
     <Content Include="imgz\Bursary\Truworths.jpg" />
+    <Content Include="imgz\CareerPath\certificates.jpg" />
+    <Content Include="imgz\CareerPath\degrees.jpg" />
+    <Content Include="imgz\CareerPath\diplomas.jpg" />
     <Content Include="imgz\certificate.png" />
     <Content Include="imgz\confidential-folder.png" />
     <Content Include="imgz\degrees\engineering\Chemical.jpg" />
@@ -410,6 +420,9 @@
     <Content Include="imgz\gmail.png" />
     <Content Include="imgz\google-plus.png" />
     <Content Include="imgz\hhhh.png" />
+    <Content Include="imgz\learnership\theDA.jpg" />
+    <Content Include="imgz\learnership\tshimogolong.jpg" />
+    <Content Include="imgz\learnership\umuzi.jpg" />
     <Content Include="imgz\linkedin.png" />
     <Content Include="imgz\logo.PNG" />
     <Content Include="imgz\mail.png" />
@@ -670,6 +683,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903260812224_AddImagesToFinancialAid.resx">
       <DependentUpon>201903260812224_AddImagesToFinancialAid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903261356222_InsertUrlApplyColumnToLearnershipTable.resx">
+      <DependentUpon>201903261356222_InsertUrlApplyColumnToLearnershipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903261357461_InsertDataToLearnershipTable.resx">
+      <DependentUpon>201903261357461_InsertDataToLearnershipTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

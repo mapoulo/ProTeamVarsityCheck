@@ -1,10 +1,9 @@
-﻿<!--
+﻿@model VarsityCheck.ViewModels.DisplayViews
 
-@@{
-    ViewBag.Title = "University";
-    
+@{
+    ViewBag.Title = "University List";
+
 }
-
 
 <section>
     <div class="head-t">
@@ -12,32 +11,73 @@
             <img src="~/imgz/up.jpg" alt="">
         </article>
         <aside>
-            <h5>@@ViewBag.Name</h5>
+            <h5>@ViewBag.Name</h5>
         </aside>
     </div>
 </section>
+<section>
+    <div class="container">
+        @{
+            var schoolId = 0;
+            var FacultyId = 0;
+        }
 
-<section id="filterid">
-    <div class="optionsDiv">
-        Filter By Position
-        <select id="selectField">
-            <option value="All" selected>All</option>
-            <option value="Eastern">Eastern Cape</option>
-            <option value="Free">Free State</option>
-            <option value="Gauteng">Gauteng</option>
-            <option value="KwaZulu">KwaZulu-Natal</option>
-            <option value="Limpopo">Limpopo</option>
-            <option value="Mpumalanga">Mpumalanga</option>
-            <option value="Northern">Northern Cape</option>
-            <option value="North">North West</option>
-            <option value="Western">Western Cape</option>
-        </select>
+        @foreach (var degree in Model.degrees)
+        {
+            if (degree.Name == ViewBag.degreeName)
+            {
+                schoolId = degree.SchoolId;
+            }
+        }
+        @foreach (var school in Model.schools)
+        {
+            if (school.Id == schoolId)
+            {
+                FacultyId = school.FacultyId;
+            }
+        }
+
+        <div class="row">
+
+            <!--==========================================================================================================-->
+
+            <div class="dropdown">
+                <button class="btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter By province
+                </button>
+                <div class="dropdown-menu filterList" aria-labelledby="dropdownMenuButton">
+                    <ul>
+                        <li><a class="dropdown-item filterListItem" data-filter="all">ALL</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Eastern Cape">Eastern Cape</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Free State">Free State</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Gauteng">Gauteng</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="KwaZulu Natal">KwaZulu-Natal</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Limpopo">Limpopo</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Mpumalanga">Mpumalanga</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="North West">North West</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Northern Cape">Northern Cape</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Western Cape">Western Cape</a></li>
+                    </ul>
+                </div>
+                <input type="text" placeholder="Search" class="searchBar form-control" name="search" data-search>
+            </div>
+
+
+        </div>
+        <div class="row filtr-container galleryContainer">
+
+            @foreach (var university in Model.universities)
+            {
+                <div class="col-md-3 filtr-item thumbnail" data-category="all,@university.Location" data-sort="@university.Name">
+                    <img src="@Url.Content(university.Image)" alt="">
+                    <span class="item-desc">@university.Name</span>
+                    <button type="button" onclick="window.location.href ='@university.UrlHome'" class="btn-findMore">More Info</button>
+                </div>
+            }
+
+        </div>
     </div>
-
-@@RenderBody()
-
-
-</section>-->
+</section>
 
 
 

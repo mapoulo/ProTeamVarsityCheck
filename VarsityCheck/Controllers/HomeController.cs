@@ -34,7 +34,7 @@ namespace VarsityCheck.Controllers
 
         public ActionResult CareerPath()
         {
-            ViewBag.Name = "CareerPath";
+            ViewBag.Name = "Career Path";
 
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
@@ -84,6 +84,8 @@ namespace VarsityCheck.Controllers
 
         public ActionResult Learnership()
         {
+            ViewBag.Name = "LEARNERSHIP";
+
             display.financialAids = theDbcontext.financialAids.ToList();
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
@@ -91,6 +93,8 @@ namespace VarsityCheck.Controllers
             display.schools = theDbcontext.schools.ToList();
             display.diplomas = theDbcontext.diplomas.ToList();
             display.degrees = theDbcontext.degrees.ToList();
+            display.learnerships = theDbcontext.learnerships.ToList();
+
 
             return View(display);
         }
@@ -113,7 +117,6 @@ namespace VarsityCheck.Controllers
             display.schools = theDbcontext.schools.ToList();
             display.diplomas = theDbcontext.diplomas.ToList();
             display.degrees = theDbcontext.degrees.ToList();
-
 
             return View(display);
         }

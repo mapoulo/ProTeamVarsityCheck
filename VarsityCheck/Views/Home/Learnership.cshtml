@@ -7,52 +7,51 @@
 <section>
     <div class="head-t">
         <article>
-            <img src="~/imgz/up.jpg" alt="">
+            <img src="~/imgz/trophy-shape.png" alt="">
         </article>
         <aside>
-            <h5>SOUTH AFRICAN LEARNERSHIP</h5>
+            <h5>@ViewBag.Title</h5>
         </aside>
     </div>
 </section>
 
-<section id="filterid">
-    <div class="optionsDiv">
-        Filter By Position
-        <select id="selectField">
-            <option value="All" selected>All</option>
-            <option value="Eastern">Eastern Cape</option>
-            <option value="Free">Free State</option>
-            <option value="Gauteng">Gauteng</option>
-            <option value="KwaZulu">KwaZulu-Natalr</option>
-            <option value="Limpopo">Limpopo</option>
-            <option value="Mpumalanga">Mpumalanga</option>
-            <option value="Northern">Northern Cape</option>
-            <option value="North">North West</option>
-            <option value="Western">Western Cape</option>
-        </select>
-    </div>
-    <table id="myTable">
+<section>
+    <div class="container">
 
-        <tr position=""></tr>
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter By Faculty/School
+                </button>
+                <div class="dropdown-menu filterList" aria-labelledby="dropdownMenuButton">
+                    <ul>
+                        <li><a class="dropdown-item filterListItem" data-filter="all">ALL</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Health Sciences">Health Sciences</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Education">Education</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Engineering">Engineering</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Humanities">Humanities</a></li>
+                    </ul>
+                </div>
+                <input type="text" placeholder="Search" class="searchBar form-control" name="search" data-search>
+            </div>
 
-        <tr position="Engineering">
-            @foreach (var learnership in Model.degrees)
+        </div>
+
+        <div class="row filtr-container galleryContainer">
+
+            @foreach (var learnership in Model.learnerships)
             {
-                <td>
-                    <div class="cont1">
-                        <div id="co">
-                            <h3> @learnership.Name</h3>
-                            <img src="~/imgz/degrees/engineering/industrial.jpg" alt="">
-                            <div class="btn-co">
-                                <button type="button" onclick="window.location.href = '/Home/University'" class="btn-2">More Info</button>
-                            </div>
-                        </div>
-                    </div>
-                </td>
+                <div class="col-md-3 filtr-item thumbnail" data-category="all,@learnership.Name" data-sort="@learnership.Name">
+                    <img src="@Url.Content(learnership.Image)" alt="">
+                    <span class="item-desc">@learnership.Name</span>
+                    <button type="button" onclick="window.location.href ='@Url.Action(learnership.UrlApply, "Home")'" class="btn-findMore">More Info</button>
+                </div>
             }
-        </tr>
-    </table>
+
+        </div>
+    </div>
 </section>
+
 
 @Html.Partial("_scripts")
 
