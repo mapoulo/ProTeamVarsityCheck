@@ -331,6 +331,10 @@
     <Compile Include="Migrations\201903251423026_InsertDataToLinksColumnInDiplomaTable.Designer.cs">
       <DependentUpon>201903251423026_InsertDataToLinksColumnInDiplomaTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903260812224_AddImagesToFinancialAid.cs" />
+    <Compile Include="Migrations\201903260812224_AddImagesToFinancialAid.Designer.cs">
+      <DependentUpon>201903260812224_AddImagesToFinancialAid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -385,6 +389,8 @@
     <Content Include="images\places\arch %285%29.jpg" />
     <Content Include="imgz\33.jpg" />
     <Content Include="imgz\arrow.png" />
+    <Content Include="imgz\Bursary\FNB.jpg" />
+    <Content Include="imgz\Bursary\Truworths.jpg" />
     <Content Include="imgz\certificate.png" />
     <Content Include="imgz\confidential-folder.png" />
     <Content Include="imgz\degrees\engineering\Chemical.jpg" />
@@ -409,9 +415,12 @@
     <Content Include="imgz\mail.png" />
     <Content Include="imgz\Monday Morning Motivational Video %281%29.mp4" />
     <Content Include="imgz\mortarboard.png" />
+    <Content Include="imgz\opportunities.jpg" />
+    <Content Include="imgz\path.jpg" />
     <Content Include="imgz\phone-call.png" />
     <Content Include="imgz\quality.png" />
     <Content Include="imgz\school.png" />
+    <Content Include="imgz\skill-based-career-test-1.jpg" />
     <Content Include="imgz\trophy-shape.png" />
     <Content Include="imgz\twitter.png" />
     <Content Include="Scripts\animate-enhanced.min.js" />
@@ -658,6 +667,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903251423026_InsertDataToLinksColumnInDiplomaTable.resx">
       <DependentUpon>201903251423026_InsertDataToLinksColumnInDiplomaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903260812224_AddImagesToFinancialAid.resx">
+      <DependentUpon>201903260812224_AddImagesToFinancialAid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

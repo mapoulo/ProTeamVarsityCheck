@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "CareerPath";
-   
+
 }
 
 <section>
@@ -11,7 +11,7 @@
             <img src="~/imgz/trophy-shape.png" alt="">
         </article>
         <aside>
-            <h5>SOUTH AFRICAN INTITUTIONS</h5>
+            <h5>@ViewBag.Name</h5>
         </aside>
     </div>
 </section>
@@ -22,7 +22,7 @@
             <h3>Degree</h3>
             <img src="~/imgz/trophy-shape.png" alt="">
             <div class="btn-co">
-                <button type="button"  onclick="window.location.href ='@Url.Action("Degrees", "Home")'" class="btn-2">Enter</button>              
+                <button type="button" onclick="window.location.href ='@Url.Action("Degrees", "Home")'" class="btn-2">Enter</button>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
             <h3>Diploma</h3>
             <img src="~/imgz/trophy-shape.png" alt="">
             <div class="btn-co">
-                <button type="button"  onclick="window.location.href ='@Url.Action("Diploma", "Home")'" class="btn-2">Enter</button>
+                <button type="button" onclick="window.location.href ='@Url.Action("Diploma", "Home")'" class="btn-2">Enter</button>
             </div>
         </div>
     </div>
@@ -42,14 +42,34 @@
             <h3>Certificate</h3>
             <img src="~/imgz/trophy-shape.png" alt="" width="50" height="550">
             <div class="btn-co">
-                <button type="button" onclick="window.location.href ='@Url.Action("Certification", "Home")'" class="btn-2">Enter</button>               
+                <button type="button" onclick="window.location.href ='@Url.Action("Certification", "Home")'" class="btn-2">Enter</button>
             </div>
         </div>
     </div>
-
 </section>
 
+<section class="section4 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="row filtr-container galleryContainer">
+                <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="tower">
+                    <img src="~/imgz/trophy-shape.png.jpg" alt="">
+                    <button type="button" onclick="window.location.href ='@Url.Action("Degrees", "Home")'" class="btn-findMore">Enter</button>
+                </div>
+                   
+                <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="tower">
+                    <img src="~/imgz/trophy-shape.png.jpg" alt="">
+                    <button type="button" onclick="window.location.href ='@Url.Action("Diploma", "Home")'" class="btn-findMore">Enter</button>
+                </div>
 
+                <div class="col-md-3 filtr-item thumbnail" data-category="all,places" data-sort="tower">
+                    <img src="~/imgz/trophy-shape.png.jpg" alt="">
+                    <button type="button" onclick="window.location.href ='@Url.Action("Certification", "Home")'" class="btn-findMore">Enter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

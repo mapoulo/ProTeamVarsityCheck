@@ -19,18 +19,23 @@ namespace VarsityCheck.Controllers
 
         public ActionResult Bursary()
         {
+            ViewBag.Name = "Financial Aid";
+
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
             display.schools = theDbcontext.schools.ToList();
             display.diplomas = theDbcontext.diplomas.ToList();
             display.degrees = theDbcontext.degrees.ToList();
+            display.financialAids = theDbcontext.financialAids.ToList();
 
             return View(display);
         }
 
         public ActionResult CareerPath()
         {
+            ViewBag.Name = "CareerPath";
+
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
@@ -54,7 +59,7 @@ namespace VarsityCheck.Controllers
 
         public ActionResult Diploma()
         {
-            ViewBag.Name = "DIPLOMA";          
+            ViewBag.Name = "DIPLOMA";
 
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
@@ -79,6 +84,7 @@ namespace VarsityCheck.Controllers
 
         public ActionResult Learnership()
         {
+            display.financialAids = theDbcontext.financialAids.ToList();
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
@@ -101,6 +107,20 @@ namespace VarsityCheck.Controllers
         }
         public ActionResult UniversityList()
         {
+            display.faculties = theDbcontext.faculties.ToList();
+            display.universities = theDbcontext.universities.ToList();
+            display.universityFaculties = theDbcontext.universityFaculties.ToList();
+            display.schools = theDbcontext.schools.ToList();
+            display.diplomas = theDbcontext.diplomas.ToList();
+            display.degrees = theDbcontext.degrees.ToList();
+
+
+            return View(display);
+        }
+        public ActionResult GovernmentSector()
+        {
+            ViewBag.Name = "GOVERNMENT OPPORTUNITIES";
+            display.financialAids = theDbcontext.financialAids.ToList();
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
