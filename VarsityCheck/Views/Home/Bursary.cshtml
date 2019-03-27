@@ -5,7 +5,6 @@
 
 }
 
-
 <section>
     <div class="head-t">
         <article>
@@ -19,31 +18,25 @@
 <section>
     <div class="container">
 
+
         <div class="row">
-
-            <!--==========================================================================================================-->
-
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Filter By province
+                <button class="btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter By Faculty/School
                 </button>
                 <div class="dropdown-menu filterList" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item filterListItem" data-filter="all">ALL</a>
-                    <a class="dropdown-item filterListItem" data-filter="Eastern Cape">Eastern Cape</a>
-                    <a class="dropdown-item filterListItem" data-filter="Free State">Free State</a>
-                    <a class="dropdown-item filterListItem" data-filter="Gauteng">Gauteng</a>
-                    <a class="dropdown-item filterListItem" data-filter="KwaZulu Natal">KwaZulu-Natal</a>
-                    <a class="dropdown-item filterListItem" data-filter="Limpopo">Limpopo</a>
-                    <a class="dropdown-item filterListItem" data-filter="Mpumalanga">Mpumalanga</a>
-                    <a class="dropdown-item filterListItem" data-filter="North West">North West</a>
-                    <a class="dropdown-item filterListItem" data-filter="Northern Cape">Northern Cape</a>
-                    <a class="dropdown-item filterListItem" data-filter="Western Cape">Western Cape</a>
+                    <ul>
+                        <li><a class="dropdown-item filterListItem" data-filter="all">ALL</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Health Sciences">Health Sciences</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Education">Education</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Engineering">Engineering</a></li>
+                        <li><a class="dropdown-item filterListItem" data-filter="Humanities">Humanities</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-md-12 d-flex flex-wrap justify-content-between galleryFilters">
                 <input type="text" placeholder="Search" class="searchBar form-control" name="search" data-search>
             </div>
         </div>
+
         <div class="row filtr-container galleryContainer">
 
             @foreach (var financial in Model.financialAids)
@@ -58,5 +51,3 @@
         </div>
     </div>
 </section>
-
-@Html.Partial("_scripts")

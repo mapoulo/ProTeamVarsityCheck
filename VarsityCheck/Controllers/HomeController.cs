@@ -100,6 +100,9 @@ namespace VarsityCheck.Controllers
         }
         public ActionResult University()
         {
+
+            ViewBag.Name = "LIST OF SOUTH AFRICAN UNIVERSITIES";
+
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
@@ -123,6 +126,7 @@ namespace VarsityCheck.Controllers
         public ActionResult GovernmentSector()
         {
             ViewBag.Name = "GOVERNMENT OPPORTUNITIES";
+
             display.financialAids = theDbcontext.financialAids.ToList();
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
@@ -130,7 +134,7 @@ namespace VarsityCheck.Controllers
             display.schools = theDbcontext.schools.ToList();
             display.diplomas = theDbcontext.diplomas.ToList();
             display.degrees = theDbcontext.degrees.ToList();
-
+            display.governmentSectors = theDbcontext.governmentSectors.ToList();
 
             return View(display);
         }

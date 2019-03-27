@@ -7,14 +7,13 @@
 <section>
     <div class="head-t">
         <article>
-            <img src="~/imgz/trophy-shape.png" alt="">
+            <img src="~/imgz/up.jpg" alt="">
         </article>
         <aside>
-            <h5>@ViewBag.Title</h5>
+            <h5>@ViewBag.Name</h5>
         </aside>
     </div>
 </section>
-
 <section>
     <div class="container">
 
@@ -44,7 +43,7 @@
                 <div class="col-md-3 filtr-item thumbnail" data-category="all,@learnership.Name" data-sort="@learnership.Name">
                     <img src="@Url.Content(learnership.Image)" alt="">
                     <span class="item-desc">@learnership.Name</span>
-                    <button type="button" onclick="window.location.href ='@Url.Action(learnership.UrlApply, "Home")'" class="btn-findMore">More Info</button>
+                    <button type="button" onclick="window.location.href ='@learnership.UrlApply'" class="btn-findMore">More Info</button>
                 </div>
             }
 
@@ -53,5 +52,5 @@
 </section>
 
 
-@Html.Partial("_scripts")
+
 

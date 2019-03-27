@@ -343,6 +343,10 @@
     <Compile Include="Migrations\201903261357461_InsertDataToLearnershipTable.Designer.cs">
       <DependentUpon>201903261357461_InsertDataToLearnershipTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903271018189_InsertDataToGovernmentSectorTable.cs" />
+    <Compile Include="Migrations\201903271018189_InsertDataToGovernmentSectorTable.Designer.cs">
+      <DependentUpon>201903271018189_InsertDataToGovernmentSectorTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -379,21 +383,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="images\animals\animals %281%29.jpg" />
-    <Content Include="images\animals\animals %282%29.jpg" />
-    <Content Include="images\animals\animals %283%29.jpg" />
-    <Content Include="images\animals\animals %284%29.jpg" />
-    <Content Include="images\animals\animals %285%29.jpg" />
-    <Content Include="images\nature\nature %281%29.jpg" />
-    <Content Include="images\nature\nature %282%29.jpg" />
-    <Content Include="images\nature\nature %283%29.jpg" />
-    <Content Include="images\nature\nature %284%29.jpg" />
-    <Content Include="images\nature\nature %285%29.jpg" />
-    <Content Include="images\places\arch %281%29.jpg" />
-    <Content Include="images\places\arch %282%29.jpg" />
-    <Content Include="images\places\arch %283%29.jpg" />
-    <Content Include="images\places\arch %284%29.jpg" />
-    <Content Include="images\places\arch %285%29.jpg" />
     <Content Include="imgz\33.jpg" />
     <Content Include="imgz\arrow.png" />
     <Content Include="imgz\Bursary\FNB.jpg" />
@@ -419,20 +408,25 @@
     <Content Include="imgz\gm.png" />
     <Content Include="imgz\gmail.png" />
     <Content Include="imgz\google-plus.png" />
-    <Content Include="imgz\hhhh.png" />
+    <Content Include="imgz\government\saa.jpg" />
+    <Content Include="imgz\government\saadf.jpg" />
+    <Content Include="imgz\government\samhs.jpg" />
+    <Content Include="imgz\government\sandf.jpg" />
+    <Content Include="imgz\government\sanf.jpg" />
+    <Content Include="imgz\government\saps.jpg" />
+    <Content Include="imgz\government\South_African_Air_Force.png" />
     <Content Include="imgz\learnership\theDA.jpg" />
     <Content Include="imgz\learnership\tshimogolong.jpg" />
     <Content Include="imgz\learnership\umuzi.jpg" />
+    <Content Include="imgz\levitate.jpg" />
     <Content Include="imgz\linkedin.png" />
     <Content Include="imgz\logo.PNG" />
     <Content Include="imgz\mail.png" />
     <Content Include="imgz\Monday Morning Motivational Video %281%29.mp4" />
-    <Content Include="imgz\mortarboard.png" />
     <Content Include="imgz\opportunities.jpg" />
     <Content Include="imgz\path.jpg" />
     <Content Include="imgz\phone-call.png" />
     <Content Include="imgz\quality.png" />
-    <Content Include="imgz\school.png" />
     <Content Include="imgz\skill-based-career-test-1.jpg" />
     <Content Include="imgz\trophy-shape.png" />
     <Content Include="imgz\twitter.png" />
@@ -689,6 +683,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903261357461_InsertDataToLearnershipTable.resx">
       <DependentUpon>201903261357461_InsertDataToLearnershipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903271018189_InsertDataToGovernmentSectorTable.resx">
+      <DependentUpon>201903271018189_InsertDataToGovernmentSectorTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
