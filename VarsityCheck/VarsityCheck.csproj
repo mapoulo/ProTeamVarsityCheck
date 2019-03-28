@@ -347,6 +347,42 @@
     <Compile Include="Migrations\201903271018189_InsertDataToGovernmentSectorTable.Designer.cs">
       <DependentUpon>201903271018189_InsertDataToGovernmentSectorTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903281327350_AddDataToCertificatesTable.cs" />
+    <Compile Include="Migrations\201903281327350_AddDataToCertificatesTable.Designer.cs">
+      <DependentUpon>201903281327350_AddDataToCertificatesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281336529_InsertITrowToFieldTable.cs" />
+    <Compile Include="Migrations\201903281336529_InsertITrowToFieldTable.Designer.cs">
+      <DependentUpon>201903281336529_InsertITrowToFieldTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281402029_AddDataToCertificatesTable1.cs" />
+    <Compile Include="Migrations\201903281402029_AddDataToCertificatesTable1.Designer.cs">
+      <DependentUpon>201903281402029_AddDataToCertificatesTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281405062_AddITDataToCertificatesTable.cs" />
+    <Compile Include="Migrations\201903281405062_AddITDataToCertificatesTable.Designer.cs">
+      <DependentUpon>201903281405062_AddITDataToCertificatesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281418132_AddITDataToCertificatesTable1.cs" />
+    <Compile Include="Migrations\201903281418132_AddITDataToCertificatesTable1.Designer.cs">
+      <DependentUpon>201903281418132_AddITDataToCertificatesTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281420021_AddDataToCertificatesTable2.cs" />
+    <Compile Include="Migrations\201903281420021_AddDataToCertificatesTable2.Designer.cs">
+      <DependentUpon>201903281420021_AddDataToCertificatesTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281423226_AddDataToCertificatesTable3.cs" />
+    <Compile Include="Migrations\201903281423226_AddDataToCertificatesTable3.Designer.cs">
+      <DependentUpon>201903281423226_AddDataToCertificatesTable3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281425154_AddDataToCertificatesTable4.cs" />
+    <Compile Include="Migrations\201903281425154_AddDataToCertificatesTable4.Designer.cs">
+      <DependentUpon>201903281425154_AddDataToCertificatesTable4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903281427141_AddDataToCertificatesTable5.cs" />
+    <Compile Include="Migrations\201903281427141_AddDataToCertificatesTable5.Designer.cs">
+      <DependentUpon>201903281427141_AddDataToCertificatesTable5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -391,6 +427,9 @@
     <Content Include="imgz\CareerPath\degrees.jpg" />
     <Content Include="imgz\CareerPath\diplomas.jpg" />
     <Content Include="imgz\certificate.png" />
+    <Content Include="imgz\certificates\comptia.jpg" />
+    <Content Include="imgz\certificates\mcsa.jpg" />
+    <Content Include="imgz\certificates\oca.jpg" />
     <Content Include="imgz\confidential-folder.png" />
     <Content Include="imgz\degrees\engineering\Chemical.jpg" />
     <Content Include="imgz\degrees\engineering\civil.jpg" />
@@ -404,6 +443,7 @@
     <Content Include="imgz\Diploma\operations.jpg" />
     <Content Include="imgz\facebook %281%29.png" />
     <Content Include="imgz\feedback.png" />
+    <Content Include="imgz\fields\IT.jpg" />
     <Content Include="imgz\first.png" />
     <Content Include="imgz\gm.png" />
     <Content Include="imgz\gmail.png" />
@@ -526,6 +566,7 @@
     <Content Include="Views\Home\Physical.cshtml" />
     <Content Include="Views\Home\Mangement.cshtml" />
     <Content Include="Views\Home\Operations.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903120825374_InitialMigrations.resx">
@@ -686,6 +727,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903271018189_InsertDataToGovernmentSectorTable.resx">
       <DependentUpon>201903271018189_InsertDataToGovernmentSectorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281327350_AddDataToCertificatesTable.resx">
+      <DependentUpon>201903281327350_AddDataToCertificatesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281336529_InsertITrowToFieldTable.resx">
+      <DependentUpon>201903281336529_InsertITrowToFieldTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281402029_AddDataToCertificatesTable1.resx">
+      <DependentUpon>201903281402029_AddDataToCertificatesTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281405062_AddITDataToCertificatesTable.resx">
+      <DependentUpon>201903281405062_AddITDataToCertificatesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281418132_AddITDataToCertificatesTable1.resx">
+      <DependentUpon>201903281418132_AddITDataToCertificatesTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281420021_AddDataToCertificatesTable2.resx">
+      <DependentUpon>201903281420021_AddDataToCertificatesTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281423226_AddDataToCertificatesTable3.resx">
+      <DependentUpon>201903281423226_AddDataToCertificatesTable3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281425154_AddDataToCertificatesTable4.resx">
+      <DependentUpon>201903281425154_AddDataToCertificatesTable4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903281427141_AddDataToCertificatesTable5.resx">
+      <DependentUpon>201903281427141_AddDataToCertificatesTable5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

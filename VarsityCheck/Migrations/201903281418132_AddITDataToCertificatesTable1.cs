@@ -1,0 +1,18 @@
+namespace VarsityCheck.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class AddITDataToCertificatesTable1 : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.Certificates", "Name", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            AlterColumn("dbo.Certificates", "Name", c => c.Int(nullable: false));
+        }
+    }
+}

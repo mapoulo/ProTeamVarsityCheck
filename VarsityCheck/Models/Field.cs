@@ -14,6 +14,7 @@ namespace VarsityCheck.Models
         public ICollection<Certificate> CertificatesList { get; set; }
         public ICollection<GovernmentSectorField> GovernmentSectorFieldsList { get; set; }
         public string Image { get; set; }
+       
 
     }
 }

@@ -72,12 +72,15 @@ namespace VarsityCheck.Controllers
         }
         public ActionResult Certification()
         {
+            ViewBag.Name = "CERTIFICATES";
+
             display.faculties = theDbcontext.faculties.ToList();
             display.universities = theDbcontext.universities.ToList();
             display.universityFaculties = theDbcontext.universityFaculties.ToList();
             display.schools = theDbcontext.schools.ToList();
             display.diplomas = theDbcontext.diplomas.ToList();
             display.degrees = theDbcontext.degrees.ToList();
+            display.certificates = theDbcontext.certificates.ToList();
 
             return View(display);
         }
