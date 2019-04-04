@@ -383,6 +383,10 @@
     <Compile Include="Migrations\201903281427141_AddDataToCertificatesTable5.Designer.cs">
       <DependentUpon>201903281427141_AddDataToCertificatesTable5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904031502416_emptymigration.cs" />
+    <Compile Include="Migrations\201904031502416_emptymigration.Designer.cs">
+      <DependentUpon>201904031502416_emptymigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -421,7 +425,13 @@
     <Content Include="Global.asax" />
     <Content Include="imgz\33.jpg" />
     <Content Include="imgz\arrow.png" />
+    <Content Include="imgz\Bursary\ABB.jpg" />
+    <Content Include="imgz\Bursary\chieta.jpg" />
     <Content Include="imgz\Bursary\FNB.jpg" />
+    <Content Include="imgz\Bursary\hatch.jpg" />
+    <Content Include="imgz\Bursary\lonmin.jpg" />
+    <Content Include="imgz\Bursary\psg.jpg" />
+    <Content Include="imgz\Bursary\shoprite.jpg" />
     <Content Include="imgz\Bursary\Truworths.jpg" />
     <Content Include="imgz\CareerPath\certificates.jpg" />
     <Content Include="imgz\CareerPath\degrees.jpg" />
@@ -455,7 +465,16 @@
     <Content Include="imgz\government\sanf.jpg" />
     <Content Include="imgz\government\saps.jpg" />
     <Content Include="imgz\government\South_African_Air_Force.png" />
+    <Content Include="imgz\learnership\Dept of Rural Development.jpg" />
+    <Content Include="imgz\learnership\engen.jpg" />
+    <Content Include="imgz\learnership\lafarge.jpg" />
+    <Content Include="imgz\learnership\lanseria.jpg" />
+    <Content Include="imgz\learnership\levitate logo.jpg" />
+    <Content Include="imgz\learnership\levitate logo2.jpg" />
+    <Content Include="imgz\learnership\levitate.jpg" />
+    <Content Include="imgz\learnership\pwc.jpg" />
     <Content Include="imgz\learnership\theDA.jpg" />
+    <Content Include="imgz\learnership\transnet.jpg" />
     <Content Include="imgz\learnership\tshimogolong.jpg" />
     <Content Include="imgz\learnership\umuzi.jpg" />
     <Content Include="imgz\levitate.jpg" />
@@ -515,7 +534,9 @@
     <Content Include="imgz\logos\vut.jpg" />
     <Content Include="imgz\logos\wits.jpg" />
     <Content Include="imgz\logos\wsu.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -754,6 +775,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903281427141_AddDataToCertificatesTable5.resx">
       <DependentUpon>201903281427141_AddDataToCertificatesTable5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904031502416_emptymigration.resx">
+      <DependentUpon>201904031502416_emptymigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

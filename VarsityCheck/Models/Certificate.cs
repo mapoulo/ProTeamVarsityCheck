@@ -13,5 +13,6 @@ namespace VarsityCheck.Models
         public int FieldId { get; set; }
         public ICollection<LearnershipCertificate> LearnershipCertificateList { get; set; }
         public string Image { get; set; }
+        public string URLs { get; set; }
     }
 }
