@@ -387,6 +387,18 @@
     <Compile Include="Migrations\201904031502416_emptymigration.Designer.cs">
       <DependentUpon>201904031502416_emptymigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904040757197_AddLearnershipsNamesToLearnershipTable.cs" />
+    <Compile Include="Migrations\201904040757197_AddLearnershipsNamesToLearnershipTable.Designer.cs">
+      <DependentUpon>201904040757197_AddLearnershipsNamesToLearnershipTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904040759502_AddDataTolearnershipTable.cs" />
+    <Compile Include="Migrations\201904040759502_AddDataTolearnershipTable.Designer.cs">
+      <DependentUpon>201904040759502_AddDataTolearnershipTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904040821463_DropLearnershipNameFromLearnershipTable.cs" />
+    <Compile Include="Migrations\201904040821463_DropLearnershipNameFromLearnershipTable.Designer.cs">
+      <DependentUpon>201904040821463_DropLearnershipNameFromLearnershipTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CareerOpportunity.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -778,6 +790,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904031502416_emptymigration.resx">
       <DependentUpon>201904031502416_emptymigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904040757197_AddLearnershipsNamesToLearnershipTable.resx">
+      <DependentUpon>201904040757197_AddLearnershipsNamesToLearnershipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904040759502_AddDataTolearnershipTable.resx">
+      <DependentUpon>201904040759502_AddDataTolearnershipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904040821463_DropLearnershipNameFromLearnershipTable.resx">
+      <DependentUpon>201904040821463_DropLearnershipNameFromLearnershipTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

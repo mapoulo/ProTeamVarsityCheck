@@ -13,6 +13,7 @@ namespace VarsityCheck.Models
         public ICollection<LearnershipCertificate> LearnershipCertificateList { get; set; }
         public string Image { get; set; }
         public string UrlApply { get; set; }
+        public string LearnershipNames { get; set; }
 
     }
 }
